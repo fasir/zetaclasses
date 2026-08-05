@@ -29,9 +29,15 @@
   <div class="bg-glow bg-glow--2"></div>
   <div class="bg-glow bg-glow--3"></div>
 
+  <!-- Particle Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
   <div class="floating-3d-shape shape--cube" style="top: 15%; left: 5%;"></div>
   <div class="floating-3d-shape shape--pyramid" style="top: 40%; right: 6%;"></div>
   <div class="floating-3d-shape shape--cube" style="top: 75%; left: 8%;"></div>
+  <div class="floating-3d-shape shape--circle" style="top: 25%; right: 12%;"></div>
+  <div class="floating-3d-shape shape--circle" style="top: 65%; left: 15%;"></div>
+  <div class="floating-3d-shape shape--pyramid" style="top: 85%; right: 10%;"></div>
 
   <!-- ═══ HEADER ═══ -->
   <header class="header" id="header">
@@ -82,7 +88,7 @@
           </div>
 
           <h1 class="hero__title">
-            Unlock Your <span class="highlight">Academic Potential</span> With Expert Tutoring
+            Unlock Your <span class="highlight">Academic Potential</span> With <span id="typing-text"></span><span class="typing-cursor"></span>
           </h1>
 
           <p class="hero__subtitle">
@@ -120,7 +126,7 @@
         </div>
 
         <div class="hero__visual reveal-right">
-          <div class="hero__image-wrapper tilt-card">
+          <div class="hero__image-wrapper tilt-card gradient-border">
             <img src="images/hero-students.png" alt="Students learning online with ZETA CLASSES" class="hero__image" />
           </div>
 
@@ -137,6 +143,44 @@
             <div>
               <div class="label">Live Classes</div>
               <div class="value">24/7 Support</div>
+            </div>
+          </div>
+  </section>
+
+  <!-- ═══ FULL-WIDTH HERO STATS BANNER ═══ -->
+  <section class="stats-banner-section reveal-zoom">
+    <div class="stats-banner-full spotlight-card" id="stats-banner">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card tilt-card">
+            <div class="stat-card__icon tilt-card__icon-depth">🎓</div>
+            <div class="stat-card__content tilt-card__depth">
+              <div class="stat__number" data-target="5000">0</div>
+              <div class="stat__label">Students Enrolled</div>
+            </div>
+          </div>
+
+          <div class="stat-card tilt-card">
+            <div class="stat-card__icon tilt-card__icon-depth">👨‍🏫</div>
+            <div class="stat-card__content tilt-card__depth">
+              <div class="stat__number" data-target="100">0</div>
+              <div class="stat__label">Expert Tutors</div>
+            </div>
+          </div>
+
+          <div class="stat-card tilt-card">
+            <div class="stat-card__icon tilt-card__icon-depth">🌍</div>
+            <div class="stat-card__content tilt-card__depth">
+              <div class="stat__number" data-target="15">0</div>
+              <div class="stat__label">Countries Reached</div>
+            </div>
+          </div>
+
+          <div class="stat-card tilt-card">
+            <div class="stat-card__icon tilt-card__icon-depth">🏆</div>
+            <div class="stat-card__content tilt-card__depth">
+              <div class="stat__number" data-target="95">0</div>
+              <div class="stat__label">Success Rate</div>
             </div>
           </div>
         </div>
@@ -295,6 +339,13 @@
     </div>
   </section>
 
+  <!-- Section Wave Divider -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
+      <path d="M0 30C360 60 720 0 1080 30C1260 45 1380 60 1440 60V60H0Z" fill="rgba(22,66,140,0.06)"/>
+    </svg>
+  </div>
+
   <!-- ═══ WHY US ═══ -->
   <section class="section" id="why-us">
     <div class="container">
@@ -385,29 +436,13 @@
     </div>
   </section>
 
-  <!-- ═══ STATS BANNER ═══ -->
-  <section class="section">
-    <div class="container">
-      <div class="stats-banner reveal-zoom spotlight-card" id="stats-banner">
-        <div class="stat tilt-card">
-          <div class="stat__number tilt-card__depth" data-target="5000">0</div>
-          <div class="stat__label tilt-card__depth">Students Enrolled</div>
-        </div>
-        <div class="stat tilt-card">
-          <div class="stat__number tilt-card__depth" data-target="100">0</div>
-          <div class="stat__label tilt-card__depth">Expert Tutors</div>
-        </div>
-        <div class="stat tilt-card">
-          <div class="stat__number tilt-card__depth" data-target="15">0</div>
-          <div class="stat__label tilt-card__depth">Countries Reached</div>
-        </div>
-        <div class="stat tilt-card">
-          <div class="stat__number tilt-card__depth" data-target="95">0</div>
-          <div class="stat__label tilt-card__depth">% Success Rate</div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  <!-- Section Wave Divider -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
+      <path d="M0 0C360 60 720 0 1080 60C1260 30 1380 0 1440 0V60H0Z" fill="rgba(217,37,52,0.04)"/>
+    </svg>
+  </div>
 
   <!-- ═══ TESTIMONIALS ═══ -->
   <section class="section" id="testimonials">
@@ -825,6 +860,109 @@
         }
       });
     });
+
+    // ── 12. Hero Typing Text Effect ──
+    const typingEl = document.getElementById('typing-text');
+    const typingPhrases = ['Expert Tutoring', 'NEET/JEE Coaching', 'CBSE Mastery', 'IB Excellence', 'Kerala Board Success'];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeLoop() {
+      const current = typingPhrases[phraseIndex];
+      if (!isDeleting) {
+        typingEl.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === current.length) {
+          isDeleting = true;
+          setTimeout(typeLoop, 1800);
+          return;
+        }
+        setTimeout(typeLoop, 90);
+      } else {
+        typingEl.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+          setTimeout(typeLoop, 400);
+          return;
+        }
+        setTimeout(typeLoop, 50);
+      }
+    }
+    if (typingEl) typeLoop();
+
+    // ── 13. Particle Canvas Background ──
+    const canvas = document.getElementById('particles-canvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      const PARTICLE_COUNT = 50;
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 2.5 + 0.5;
+          this.speedX = (Math.random() - 0.5) * 0.5;
+          this.speedY = (Math.random() - 0.5) * 0.5;
+          this.opacity = Math.random() * 0.4 + 0.1;
+          // Brand-matched colors
+          const colors = ['22, 66, 140', '37, 99, 235', '217, 37, 52', '245, 158, 11'];
+          this.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+          if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(new Particle());
+      }
+
+      function connectParticles() {
+        for (let a = 0; a < particles.length; a++) {
+          for (let b = a + 1; b < particles.length; b++) {
+            const dx = particles[a].x - particles[b].x;
+            const dy = particles[a].y - particles[b].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 150) {
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(37, 99, 235, ${0.08 * (1 - dist / 150)})`;
+              ctx.lineWidth = 0.5;
+              ctx.moveTo(particles[a].x, particles[a].y);
+              ctx.lineTo(particles[b].x, particles[b].y);
+              ctx.stroke();
+            }
+          }
+        }
+      }
+
+      function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => { p.update(); p.draw(); });
+        connectParticles();
+        requestAnimationFrame(animateParticles);
+      }
+      animateParticles();
+    }
   </script>
 
   <!-- ═══ ADDITIONAL STYLES (Contact Form & Contact Info) ═══ -->
