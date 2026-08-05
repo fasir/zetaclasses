@@ -1553,7 +1553,7 @@ button {
 /* ─── SPOTLIGHT MOUSE SHINE ─── */
 .spotlight-card {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .spotlight-card::after {
@@ -2159,7 +2159,9 @@ a {
 }
 
 @keyframes spinSlow {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .subject-item:hover .subject-orbit {
