@@ -1753,24 +1753,30 @@ button {
   transform: scale(1);
 }
 
-/* ─── RESPONSIVE ─── */
+/* ─── ENHANCED RESPONSIVE MEDIA QUERIES (MOBILE & TABLET) ─── */
 @media (max-width: 1024px) {
+  .section {
+    padding: 60px 0;
+  }
+
   .hero__grid {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
   }
 
   .hero__visual {
-    max-width: 560px;
+    max-width: 540px;
     margin: 0 auto;
   }
 
   .hero__float-card--1 {
-    left: -10px;
+    left: -5px;
+    top: 5%;
   }
 
   .hero__float-card--2 {
-    right: -10px;
+    right: -5px;
+    bottom: 5%;
   }
 
   .features-grid {
@@ -1793,10 +1799,22 @@ button {
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .subjects-container-box {
+    padding: 40px 24px;
+  }
+
+  .subjects-row {
+    gap: 28px 24px;
+  }
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
 
+  /* Header & Mobile Drawer */
   .nav__links,
   .nav__cta {
     display: none;
@@ -1806,41 +1824,180 @@ button {
     display: flex;
   }
 
+  .mobile-menu {
+    top: 72px;
+    padding: 24px 20px;
+    background: rgba(6, 11, 28, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Hero Section */
   .hero {
-    padding: 120px 0 60px;
+    padding: 110px 0 50px;
+    text-align: center;
+  }
+
+  .hero__badge {
+    margin: 0 auto 16px;
   }
 
   .hero__title {
-    font-size: clamp(2rem, 7vw, 3rem);
+    font-size: clamp(2rem, 7.5vw, 2.75rem);
+    line-height: 1.2;
+  }
+
+  .hero__subtitle {
+    margin: 0 auto 24px;
+    font-size: 15px;
+  }
+
+  .hero__actions {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto 32px;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .hero__stats {
-    flex-wrap: wrap;
-    gap: var(--space-lg);
+    justify-content: center;
+    gap: var(--space-md) var(--space-xl);
   }
 
-  .features-grid {
-    grid-template-columns: 1fr;
+  /* Program Filter Bar (Touch Swipe) */
+  .program-filter-bar {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
 
-  .courses-grid {
-    grid-template-columns: 1fr;
+  .program-filter-bar::-webkit-scrollbar {
+    display: none;
   }
 
+  .filter-tab {
+    flex-shrink: 0;
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  /* Tutorix Course Cards Mobile */
+  .course-card {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .course-card__screen {
+    height: 100px;
+    padding: 16px;
+  }
+
+  .course-card__screen svg {
+    max-height: 65px;
+  }
+
+  .course-card__title {
+    font-size: 1.3rem;
+  }
+
+  .course-card__actions {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .btn-card-primary, .btn-card-outline {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  /* Subjects We Teach Mobile Layout */
+  .subjects-container-box {
+    padding: 32px 16px;
+    border-radius: 24px;
+  }
+
+  .subjects-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 12px;
+    justify-items: center;
+  }
+
+  .subject-item {
+    width: 100%;
+  }
+
+  .subject-icon-box {
+    width: 76px;
+    height: 76px;
+  }
+
+  .subject-icon-box svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .subject-name {
+    font-size: 13px;
+  }
+
+  .subject-subbadge {
+    font-size: 10px;
+    padding: 1px 8px;
+  }
+
+  /* Stats Banner Mobile Grid */
   .stats-banner {
-    grid-template-columns: repeat(2, 1fr);
+    padding: 28px 16px;
+    border-radius: 24px;
   }
 
-  .testimonials-grid {
-    grid-template-columns: 1fr;
+  .stat {
+    padding: 8px 4px;
+  }
+
+  .stat__icon {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .stat__number {
+    font-size: 2.1rem;
+  }
+
+  .stat__label {
+    font-size: 13px;
+  }
+
+  .stat__sublabel {
+    font-size: 11px;
+  }
+
+  /* Contact Section & Footer Mobile */
+  .contact-card-box {
+    padding: 24px 16px;
+    border-radius: 24px;
   }
 
   .cta-box {
-    padding: var(--space-2xl) var(--space-lg);
+    padding: 32px 20px;
+    border-radius: 24px;
   }
 
   .footer__grid {
     grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
 
   .footer__bottom {
@@ -1856,11 +2013,34 @@ button {
   }
 
   .hero__stat-number {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
-  .stat__number {
-    font-size: 2rem;
+  .subjects-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 8px;
+  }
+
+  .subject-icon-box {
+    width: 68px;
+    height: 68px;
+  }
+
+  .subject-icon-box svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .subject-name {
+    font-size: 12px;
+  }
+
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
   }
 }
 
