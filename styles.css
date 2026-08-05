@@ -2086,28 +2086,53 @@ a {
   color: var(--text-secondary);
 }
 
-/* ─── SUBJECTS WE TEACH SECTION ─── */
+/* ─── ENHANCED SUBJECTS WE TEACH SECTION ─── */
 .subjects-section {
   padding: 80px 0;
   position: relative;
 }
 
+.subjects-container-box {
+  position: relative;
+  background: rgba(8, 13, 30, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 36px;
+  padding: 56px 36px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Dot Matrix Grid Pattern Background */
+.subjects-container-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
 .subjects-row {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 36px;
-  margin-top: 40px;
+  gap: 32px 40px;
 }
 
 .subject-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 120px;
 }
 
 .subject-icon-box {
@@ -2115,7 +2140,7 @@ a {
   height: 96px;
   border-radius: 50%;
   background: rgba(13, 21, 48, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   display: grid;
   place-items: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.03);
@@ -2123,9 +2148,32 @@ a {
   transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+.subject-orbit {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--icon-glow, rgba(139, 92, 246, 0.5));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: spinSlow 10s linear infinite;
+}
+
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+
+.subject-item:hover .subject-orbit {
+  opacity: 1;
+}
+
 .subject-icon-box svg {
   width: 46px;
   height: 46px;
+  transition: transform 0.3s ease;
+}
+
+.subject-item:hover .subject-icon-box svg {
+  transform: scale(1.1);
 }
 
 .subject-icon-box::before {
@@ -2133,7 +2181,7 @@ a {
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--icon-glow, rgba(139, 92, 246, 0.4)), transparent 70%);
+  background: radial-gradient(circle, var(--icon-glow, rgba(139, 92, 246, 0.5)), transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -2142,7 +2190,7 @@ a {
 .subject-item:hover .subject-icon-box {
   transform: translateY(-8px) scale(1.08);
   border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--icon-glow, rgba(139, 92, 246, 0.35));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 35px var(--icon-glow, rgba(139, 92, 246, 0.4));
 }
 
 .subject-item:hover .subject-icon-box::before {
@@ -2153,20 +2201,54 @@ a {
   font-family: var(--font-display);
   font-size: 15px;
   font-weight: 700;
-  color: #e2e8f0;
+  color: #ffffff;
   text-align: center;
-  transition: color 0.3s ease;
+  margin-top: 4px;
 }
 
-.subject-item:hover .subject-name {
+.subject-subbadge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2px 10px;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.subject-item:hover .subject-subbadge {
   color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Subject Glow Colors */
-.subject-icon--math { --icon-glow: rgba(167, 139, 250, 0.5); }
-.subject-icon--science { --icon-glow: rgba(245, 158, 11, 0.5); }
-.subject-icon--physics { --icon-glow: rgba(59, 130, 246, 0.5); }
-.subject-icon--chem { --icon-glow: rgba(6, 182, 212, 0.5); }
-.subject-icon--bio { --icon-glow: rgba(16, 185, 129, 0.5); }
-.subject-icon--cs { --icon-glow: rgba(59, 130, 246, 0.5); }
-.subject-icon--ai { --icon-glow: rgba(251, 191, 36, 0.5); }
+.subject-icon--math {
+  --icon-glow: rgba(167, 139, 250, 0.5);
+}
+
+.subject-icon--science {
+  --icon-glow: rgba(245, 158, 11, 0.5);
+}
+
+.subject-icon--physics {
+  --icon-glow: rgba(59, 130, 246, 0.5);
+}
+
+.subject-icon--chem {
+  --icon-glow: rgba(6, 182, 212, 0.5);
+}
+
+.subject-icon--bio {
+  --icon-glow: rgba(16, 185, 129, 0.5);
+}
+
+.subject-icon--cs {
+  --icon-glow: rgba(59, 130, 246, 0.5);
+}
+
+.subject-icon--ai {
+  --icon-glow: rgba(251, 191, 36, 0.5);
+}
