@@ -87,6 +87,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -1940,7 +1941,8 @@ button {
     gap: 8px;
   }
 
-  .btn-card-primary, .btn-card-outline {
+  .btn-card-primary,
+  .btn-card-outline {
     font-size: 12px;
     padding: 10px 12px;
   }
@@ -2249,11 +2251,11 @@ a {
   transition: all 0.3s ease;
 }
 
-.contact-card-item:hover {
+/* .contact-card-item:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(37, 99, 235, 0.3);
   transform: translateY(-3px);
-}
+} */
 
 .contact-card-item__icon {
   font-size: 24px;
