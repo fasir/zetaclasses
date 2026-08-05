@@ -276,7 +276,7 @@ button {
   background: var(--grad-cta);
   color: #fff;
   transition: var(--transition-base);
-  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+  /* box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); */
 }
 
 .nav__cta:hover {
@@ -451,12 +451,12 @@ button {
 .btn--primary {
   background: var(--grad-cta);
   color: #fff;
-  box-shadow: 0 4px 20px rgba(230, 57, 70, 0.3);
+  box-shadow: 0 4px 20px rgba(57, 83, 230, 0.3);
 }
 
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(230, 57, 70, 0.45);
+  box-shadow: 0 8px 30px rgba(57, 83, 230, 0.3);
 }
 
 .btn--outline {
