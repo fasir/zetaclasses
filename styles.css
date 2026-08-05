@@ -2085,3 +2085,88 @@ a {
   font-size: 12px;
   color: var(--text-secondary);
 }
+
+/* ─── SUBJECTS WE TEACH SECTION ─── */
+.subjects-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.subjects-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 36px;
+  margin-top: 40px;
+}
+
+.subject-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subject-icon-box {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(13, 21, 48, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.03);
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.subject-icon-box svg {
+  width: 46px;
+  height: 46px;
+}
+
+.subject-icon-box::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--icon-glow, rgba(139, 92, 246, 0.4)), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.subject-item:hover .subject-icon-box {
+  transform: translateY(-8px) scale(1.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--icon-glow, rgba(139, 92, 246, 0.35));
+}
+
+.subject-item:hover .subject-icon-box::before {
+  opacity: 1;
+}
+
+.subject-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: #e2e8f0;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.subject-item:hover .subject-name {
+  color: #ffffff;
+}
+
+/* Subject Glow Colors */
+.subject-icon--math { --icon-glow: rgba(167, 139, 250, 0.5); }
+.subject-icon--science { --icon-glow: rgba(245, 158, 11, 0.5); }
+.subject-icon--physics { --icon-glow: rgba(59, 130, 246, 0.5); }
+.subject-icon--chem { --icon-glow: rgba(6, 182, 212, 0.5); }
+.subject-icon--bio { --icon-glow: rgba(16, 185, 129, 0.5); }
+.subject-icon--cs { --icon-glow: rgba(59, 130, 246, 0.5); }
+.subject-icon--ai { --icon-glow: rgba(251, 191, 36, 0.5); }
