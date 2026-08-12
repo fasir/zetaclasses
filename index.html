@@ -95,56 +95,94 @@
   <section class="hero" id="home">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-12 col-lg-6 hero__content reveal-left">
-          <div class="hero__badge">
+        <div class="col-12 col-lg-8 hero__content reveal-left">
+          <div class="hero__badge mt-3" style="text-transform: uppercase;">
             <span class="hero__badge-dot"></span>
-            Admissions Open 2025-26
+            INDIAN CURRICULUM · GCC-WIDE
           </div>
 
-          <h1 class="hero__title">
-            Unlock Your <span class="highlight">Academic Potential</span> With <span id="typing-text"></span><span
-              class="typing-cursor"></span>
+          <h1 class="hero__title" style="min-height: 150px;">
+            Bridging the gap<br>between your child's <span id="typed-hero-part"></span>
           </h1>
 
-          <p class="hero__subtitle">
-            Personalized online tuition for CBSE, IGCSE, IB & Kerala Board. Expert coaching for NEET & JEE. Join
-            thousands of successful students across the globe.
+          <p class="hero__subtitle mb-0" style="margin-top: 0.8rem;">
+            One institute, three ways to close it — pick a track below to see how it works.
           </p>
 
-          <div class="hero__actions">
-            <a href="#enroll" class="btn btn--primary" id="hero-cta">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        </div>
+
+
+      </div>
+
+      <!-- TRACK CARDS -->
+      <div class="row mt-1 g-4 reveal-up">
+        <!-- Tuition Card -->
+        <div class="col-12 col-md-4">
+          <div class="track-card track-card--tuition tilt-card">
+            <span class="track-card__badge tilt-card__depth">LIVE · ONLINE & OFFLINE</span>
+            <h3 class="track-card__title tilt-card__depth text-center">
+              <a href="#courses" class="btn glass-btn glass-btn-blue d-inline-block" style="width: 220px; font-size: 1.2rem; padding: 0.6rem 0; border-radius: 50px;">
+                Tuition
+              </a>
+            </h3>
+            <p class="track-card__desc tilt-card__depth mt-3" style="text-align: justify; letter-spacing: -0.5px;">Group classes for Grades 8–12, one-to-one mentoring for every other grade and for IGCSE. Main focus on CBSE and the Kerala Syllabus.</p>
+
+          </div>
+        </div>
+        
+        <!-- Platform Card -->
+        <div class="col-12 col-md-4">
+          <div class="track-card track-card--platform tilt-card">
+            <span class="track-card__badge tilt-card__depth">SELF-PACED · $149/YR</span>
+            <h3 class="track-card__title tilt-card__depth text-center">
+              <a href="#courses" class="btn glass-btn glass-btn-yellow d-inline-block" style="width: 220px; font-size: 1.2rem; padding: 0.6rem 0; border-radius: 50px; font-weight: bold;">
+                Web Platform
+              </a>
+            </h3>
+            <p class="track-card__desc tilt-card__depth mt-3" style="text-align: justify; letter-spacing: -0.5px;">Animated NCERT-aligned video classes, practice questions, digital notes, mock exams and parent insights — Nursery to Grade 12.</p>
+
+          </div>
+        </div>
+
+        <!-- Daycare Card -->
+        <div class="col-12 col-md-4">
+          <div class="track-card track-card--daycare tilt-card">
+            <span class="track-card__badge tilt-card__depth">LAUNCHING SOON</span>
+            <h3 class="track-card__title tilt-card__depth text-center">
+              <a href="#enroll" class="btn glass-btn glass-btn-red d-inline-block" style="width: 220px; font-size: 1.2rem; padding: 0.6rem 0; border-radius: 50px; font-weight: bold;">
+                Daycare
+              </a>
+            </h3>
+            <p class="track-card__desc tilt-card__depth mt-3" style="text-align: justify; letter-spacing: -0.5px;">A supervised online space for the hours after school — homework help, guided reading and play, hosted live by trained mentors.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILL MAP DESCRIPTION -->
+      <div class="row mt-3 reveal-up">
+        <div class="col-12">
+          <div class="skill-map-banner mx-auto text-center" style="max-width: 1200px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1rem 1.2rem; backdrop-filter: blur(10px); box-shadow: 0 8px 32px rgba(0,0,0,0.2);">
+            <p class="hero__subtitle mb-0 mx-auto mobile-justify-text" style="font-size: 1.15rem; line-height: 1.5; color: #e2e8f0; max-width: 1150px;">
+              <span style="color: white; font-weight: 600;">Every child starts with a free Skill Map assessment.</span> We check where they're strong and where they're not —<br class="d-none d-md-block">
+              subject by subject — before a single class is booked, so no gap goes unnoticed.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO ACTIONS -->
+      <div class="row mt-4">
+        <div class="col-12 text-start">
+          <div class="hero__actions justify-content-start reveal-up">
+            <a href="#enroll" class="btn btn--primary" id="hero-cta" style="font-size: 1.2rem; padding: 0.8rem 2.5rem; border-radius: 8px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                 stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10" />
                 <polygon points="10 8 16 12 10 16 10 8" />
               </svg>
-              Book Free Demo
+              Book a free demo class
             </a>
-            <a href="#courses" class="btn btn--outline" id="hero-explore">
-              Explore Courses →
-            </a>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-6 hero__visual reveal-right">
-          <div class="hero__image-wrapper tilt-card gradient-border">
-            <img src="images/hero-students.png" alt="Students learning online with ZETA CLASSES" class="hero__image" />
-          </div>
-
-          <div class="hero__float-card hero__float-card--1 tilt-card">
-            <div class="icon icon--blue">🎯</div>
-            <div>
-              <div class="label">Pass Rate</div>
-              <div class="value">95% Success</div>
-            </div>
-          </div>
-
-          <div class="hero__float-card hero__float-card--2 tilt-card">
-            <div class="icon icon--green">📈</div>
-            <div>
-              <div class="label">Live Classes</div>
-              <div class="value">24/7 Support</div>
-            </div>
           </div>
         </div>
       </div>
@@ -1566,7 +1604,66 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
-    </style>
-</body>
 
+      /* 3D Glass Buttons */
+      .glass-btn {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        box-shadow: 
+          0 8px 32px rgba(0, 0, 0, 0.25), 
+          inset 0 1px 2px rgba(255, 255, 255, 0.4),
+          inset 0 -2px 5px rgba(0, 0, 0, 0.15) !important;
+        color: white !important;
+        transition: all 0.3s ease;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      .glass-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 
+          0 12px 40px rgba(0, 0, 0, 0.3), 
+          inset 0 1px 3px rgba(255, 255, 255, 0.6),
+          inset 0 -2px 5px rgba(0, 0, 0, 0.2) !important;
+        color: white !important;
+      }
+      .glass-btn:active {
+        transform: translateY(2px);
+        box-shadow: 
+          0 4px 15px rgba(0, 0, 0, 0.2), 
+          inset 0 4px 8px rgba(0, 0, 0, 0.3),
+          inset 0 -1px 2px rgba(255, 255, 255, 0.2) !important;
+      }
+      .glass-btn-blue {
+        background: rgba(37, 99, 235, 0.45) !important; 
+      }
+      .glass-btn-yellow {
+        background: rgba(245, 158, 11, 0.45) !important;
+      }
+      .glass-btn-red {
+        background: rgba(217, 37, 52, 0.45) !important;
+      }
+      @media (max-width: 767px) {
+        .mobile-justify-text {
+          text-align: justify !important;
+          letter-spacing: -0.5px !important;
+        }
+      }
+    </style>
+
+    <!-- Typed.js for Typewriter Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (document.getElementById('typed-hero-part')) {
+          new Typed('#typed-hero-part', {
+            strings: ["<span class='highlight'>caliber</span><span class='d-none d-md-inline'><br></span><span class='d-md-none'> </span>and the <span class='highlight'>curriculum</span>."],
+            typeSpeed: 50,
+            showCursor: true,
+            cursorChar: '|',
+            autoInsertCss: true,
+          });
+        }
+      });
+    </script>
+</body>
 </html>

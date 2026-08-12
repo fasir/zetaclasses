@@ -380,7 +380,7 @@ button {
 
 /* ─── HERO ─── */
 .hero {
-  padding: 160px 0 100px;
+  padding: 80px 0 40px;
   position: relative;
   overflow: hidden;
 }
@@ -431,11 +431,11 @@ button {
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   animation: fadeInUp 0.6s ease 0.1s both;
 }
 
@@ -447,11 +447,11 @@ button {
 }
 
 .hero__subtitle {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.6;
   max-width: 520px;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
   animation: fadeInUp 0.6s ease 0.2s both;
 }
 
@@ -2472,4 +2472,108 @@ a {
 
 .subject-icon--ai {
   --icon-glow: rgba(251, 191, 36, 0.5);
+}
+
+/* ─── Hero Track Cards ─── */
+.track-card {
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem;
+  transition: var(--transition-base);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.track-card:hover {
+  background: var(--surface-hover);
+  border-color: var(--stroke-hover);
+  transform: translateY(-4px);
+}
+
+.track-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.track-card--tuition::before {
+  background: var(--accent-emerald);
+}
+.track-card--tuition .track-card__badge {
+  color: var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.15);
+}
+.track-card--tuition .track-card__link {
+  color: var(--accent-emerald);
+}
+
+.track-card--platform::before {
+  background: var(--accent-amber);
+}
+.track-card--platform .track-card__badge {
+  color: var(--accent-amber);
+  background: rgba(245, 158, 11, 0.15);
+}
+.track-card--platform .track-card__link {
+  color: var(--accent-amber);
+}
+
+.track-card--daycare::before {
+  background: var(--brand-red);
+}
+.track-card--daycare .track-card__badge {
+  color: var(--brand-red);
+  background: rgba(217, 37, 52, 0.15);
+}
+.track-card--daycare .track-card__link {
+  color: var(--brand-red);
+}
+
+.track-card__badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-md);
+  align-self: flex-start;
+}
+
+.track-card__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.track-card__desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.track-card__link {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition-fast);
+}
+
+.track-card__link:hover {
+  opacity: 0.8;
+  gap: 8px;
 }
