@@ -56,23 +56,20 @@
       </a>
 
       <div class="nav__links" id="nav-links">
-        <a href="#home" class="nav__link active">Home</a>
-        <a href="#courses" class="nav__link">Courses</a>
-        <a href="#why-us" class="nav__link">Why Us</a>
-        <a href="#about" class="nav__link">About</a>
-        <a href="#testimonials" class="nav__link">Reviews</a>
-        <a href="#contact" class="nav__link">Contact</a>
+        <a href="#home" class="nav__link active">HOME</a>
+        <a href="#courses" class="nav__link">COURSES</a>
+        <a href="#about" class="nav__link">ABOUT US</a>
+        <a href="#contact" class="nav__link">CONTACT</a>
       </div>
 
-      <a href="#enroll" class="nav__cta" id="nav-cta">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-          <polyline points="10 17 15 12 10 7" />
-          <line x1="15" y1="12" x2="3" y2="12" />
-        </svg>
-        Register Now
-      </a>
+      <div class="nav__actions" style="display: flex; gap: 10px;">
+        <a href="#login" class="nav__cta" style="background: var(--brand-blue-light); color: white; padding: 12px 36px;">
+          User Login
+        </a>
+        <a href="#enroll" class="nav__cta" style="background: var(--brand-red); color: white; padding: 12px 36px;">
+          Register Now
+        </a>
+      </div>
 
       <button class="nav__burger" id="nav-burger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -237,13 +234,10 @@
 
   <!-- ═══ COURSES ═══ -->
   <!-- ═══ COURSES / PROGRAMS ═══ -->
-  <section class="section" id="courses">
+  <section class="section pt-4" id="courses" style="padding-top: 40px;">
     <div class="container">
       <div class="section__header reveal">
-        <div class="section__tag">Our Programs</div>
-        <h2 class="section__title">Comprehensive Courses for Every Student</h2>
-        <p class="section__subtitle">From board exams to competitive entrances, we offer tailored programs designed by
-          experienced educators to maximize your potential.</p>
+        <h2 class="section__title">Comprehensive Courses for <span class="text-gradient">Every Student</span></h2>
       </div>
 
       <!-- Category Filter Tabs -->
@@ -530,11 +524,10 @@
       </div>
     </div>
     <!-- ═══ SUBJECTS WE TEACH ═══ -->
-    <section class="section subjects-section" id="subjects">
+    <section class="section subjects-section" id="subjects" style="padding-top: 80px;">
       <div class="container">
         <div class="section__header reveal">
-          <div class="section__tag" style="color: #a78bfa;">WHAT WE COVER</div>
-          <h2 class="section__title">Subjects We Teach</h2>
+          <h2 class="section__title">Subjects <span class="text-gradient">We Teach</span></h2>
           <p class="section__subtitle">Core subjects taught across every grade & exam.</p>
         </div>
 
@@ -555,19 +548,18 @@
 
             </div>
 
-            <!-- 2. Science -->
+            <!-- 2. Commerce -->
             <div class="subject-item">
-              <div class="subject-icon-box tilt-card__icon-depth subject-icon--science">
+              <div class="subject-icon-box tilt-card__icon-depth subject-icon--commerce">
                 <div class="subject-orbit"></div>
                 <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="32" cy="32" r="6" fill="#f59e0b" />
-                  <ellipse cx="32" cy="32" rx="22" ry="9" stroke="#10b981" stroke-width="2.5"
-                    transform="rotate(30 32 32)" />
-                  <ellipse cx="32" cy="32" rx="22" ry="9" stroke="#ef4444" stroke-width="2.5"
-                    transform="rotate(-30 32 32)" />
+                  <rect x="18" y="36" width="6" height="16" rx="2" fill="#3b82f6" />
+                  <rect x="29" y="24" width="6" height="28" rx="2" fill="#10b981" />
+                  <rect x="40" y="12" width="6" height="40" rx="2" fill="#f59e0b" />
+                  <path d="M12 56H52" stroke="#64748b" stroke-width="3" stroke-linecap="round" />
                 </svg>
               </div>
-              <span class="subject-name tilt-card__depth">Science</span>
+              <span class="subject-name tilt-card__depth">Commerce</span>
 
             </div>
 
@@ -622,21 +614,17 @@
             <!-- 6. Computer Fundas -->
 
 
-            <!-- 7. Gen AI World -->
+            <!-- 7. Computer Science -->
             <div class="subject-item">
-              <div class="subject-icon-box tilt-card__icon-depth subject-icon--ai">
+              <div class="subject-icon-box tilt-card__icon-depth subject-icon--cs">
                 <div class="subject-orbit"></div>
                 <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M32 16C23.1634 16 16 23.1634 16 32C16 37.5 18.5 42 22 45V50H42V45C45.5 42 48 37.5 48 32C48 23.1634 40.8366 16 32 16Z"
-                    stroke="#fbbf24" stroke-width="3" stroke-linejoin="round" />
-                  <rect x="25" y="27" width="14" height="10" rx="2" fill="#78350f" stroke="#fbbf24" stroke-width="2" />
-                  <circle cx="29" cy="32" r="1.5" fill="#fef08a" />
-                  <circle cx="35" cy="32" r="1.5" fill="#fef08a" />
-                  <path d="M28 50H36V54H28V50Z" fill="#fbbf24" />
+                  <path d="M24 24L14 32L24 40" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M40 24L50 32L40 40" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M36 16L28 48" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" />
                 </svg>
               </div>
-              <span class="subject-name tilt-card__depth">Gen AI World</span>
+              <span class="subject-name tilt-card__depth">Computer Science</span>
 
             </div>
           </div>
