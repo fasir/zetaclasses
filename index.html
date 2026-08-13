@@ -249,15 +249,230 @@
       </div>
 
       <div class="row g-4 courses-grid-row">
-        <!-- 1. CBSE Tuitions (Blue) -->
+        <!-- 6. Free Subject Competency Assessment (Cyan) -->
         <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="boards">
-          <div class="course-card course-card--blue tilt-card spotlight-card reveal-3d w-100" id="course-cbse">
+          <div class="course-card course-card--cyan tilt-card spotlight-card reveal-3d w-100" id="course-assessment">
             <div class="course-card__header-meta">
-              <span class="course-card__badge-pill tilt-card__depth">LIVE • HUMAN TUTORS</span>
+              <span class="course-card__badge-pill tilt-card__depth"><span style="color:#10b981; font-size:14px; line-height:0; margin-right:4px;">●</span> FREE • LIMITED SLOTS</span>
               <span class="course-card__rating tilt-card__depth">★ 4.9 (1.5k+)</span>
             </div>
 
             <div class="course-card__screen tilt-card__icon-depth">
+              <!-- SVG for Cyan (Assessment) -->
+              <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="140" height="75" rx="8" fill="#083344" stroke="#06b6d4" stroke-width="2" />
+                <polygon points="50,22 60,42 82,42 64,54 70,75 50,62 30,75 36,54 18,42 40,42" fill="#06b6d4" />
+                <rect x="95" y="25" width="40" height="25" rx="4" fill="#155e75" />
+                <path d="M100 35H125M100 42H115" stroke="#67e8f9" stroke-width="2" stroke-linecap="round" />
+                <text x="95" y="66" fill="#22d3ee" font-size="12" font-weight="bold" font-family="sans-serif">E=mc²</text>
+              </svg>
+            </div>
+
+            <h3 class="course-card__title tilt-card__depth">Free Subject Competency Assessment</h3>
+            <p class="course-card__desc tilt-card__depth">For students planning to join us — take a free assessment test to evaluate your current subject competency. Based on your results, our mentors will personally connect with you to guide the right learning path forward.</p>
+
+            <ul class="course-card__features tilt-card__depth">
+              <li><span class="check-icon">✓</span> Free Diagnostic Test (Subject-wise)</li>
+              <li><span class="check-icon">✓</span> Detailed Competency Report</li>
+              <li><span class="check-icon">✓</span> One-on-One Mentor Follow-up Based on Results</li>
+              <li><span class="check-icon">✓</span> Personalised Learning Path Recommendation</li>
+            </ul>
+
+            <div class="course-card__tags tilt-card__depth">
+              <span class="course-card__tag">Free Assessment</span>
+              <span class="course-card__tag">All Grades</span>
+              <span class="course-card__tag">CBSE / Kerala Board / IGCSE</span>
+            </div>
+
+            <div class="course-card__actions tilt-card__depth" style="display: flex; gap: 10px;">
+              <a href="#contact" onclick="selectCourse('assessment')" class="btn-card-primary" style="flex: 1;">Book Free Test →</a>
+              <a href="#contact" class="btn-card-outline" style="white-space: nowrap;">Know More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. IGCSE & A-Level Tuitions (Violet) -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="boards">
+          <div class="course-card course-card--violet tilt-card spotlight-card reveal-3d w-100" id="course-igcse">
+            <div class="course-card__header-meta">
+              <span class="course-card__badge-pill tilt-card__depth"><span style="color:#10b981; font-size:14px; line-height:0; margin-right:4px;">●</span> LIVE • EXPERT TUTORS</span>
+              <span class="course-card__rating tilt-card__depth">★ 4.9 (1.5k+)</span>
+            </div>
+
+            <div class="course-card__screen tilt-card__icon-depth">
+              <!-- SVG for Violet (IGCSE) -->
+              <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="140" height="75" rx="8" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="2" />
+                <circle cx="50" cy="45" r="22" fill="#312e81" stroke="#a78bfa" stroke-width="2" />
+                <path d="M50 23V67M28 45H72M34 32C42 38 58 38 66 32M34 58C42 52 58 52 66 58" stroke="#a78bfa" stroke-width="1.5" />
+                <path d="M100 25L115 55H95Z" fill="#8b5cf6" opacity="0.8" />
+                <circle cx="125" cy="35" r="8" fill="#ec4899" />
+                <rect x="90" y="65" width="50" height="4" rx="2" fill="#4338ca" />
+              </svg>
+            </div>
+
+            <h3 class="course-card__title tilt-card__depth">IGCSE & A-Level Subject Tuitions</h3>
+            <p class="course-card__desc tilt-card__depth">Group & one-on-one live classes with expert teachers. Personalised attention, real mentorship, and complete Cambridge syllabus coverage — online classes that feel just like offline.</p>
+
+            <ul class="course-card__features tilt-card__depth">
+              <li><span class="check-icon">✓</span> Cambridge Curriculum-Based Learning</li>
+              <li><span class="check-icon">✓</span> Topic-wise Practice & Exam Preparation</li>
+              <li><span class="check-icon">✓</span> Regular Tests & Performance Tracking</li>
+            </ul>
+
+            <div class="course-card__tags tilt-card__depth">
+              <span class="course-card__tag">IGCSE & A-Level</span>
+              <span class="course-card__tag">Year 9–13</span>
+              <span class="course-card__tag">Maths</span>
+              <span class="course-card__tag">Science</span>
+              <span class="course-card__tag">Commerce</span>
+            </div>
+
+            <div class="course-card__actions tilt-card__depth">
+              <a href="#contact" onclick="selectCourse('igcse')" class="btn-card-primary w-100">Register Now →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Kerala State Board (Emerald) -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="boards">
+          <div class="course-card course-card--emerald tilt-card spotlight-card reveal-3d w-100" id="course-kb">
+            <div class="course-card__header-meta">
+              <span class="course-card__badge-pill tilt-card__depth"><span style="color:#10b981; font-size:14px; line-height:0; margin-right:4px;">●</span> LIVE • EXPERT TUTORS</span>
+              <span class="course-card__rating tilt-card__depth">★ 4.9 (1.5k+)</span>
+            </div>
+
+            <div class="course-card__screen tilt-card__icon-depth">
+              <!-- SVG for Emerald (Kerala Board) -->
+              <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="140" height="75" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2" />
+                <path d="M30 30C30 30 50 25 70 30V70C50 65 30 70 30 70V30Z" fill="#047857" />
+                <path d="M70 30C70 30 90 25 110 30V70C90 65 70 70 70 70V30Z" fill="#059669" />
+                <polygon points="125,25 140,32 125,39 110,32" fill="#34d399" />
+                <rect x="123" y="36" width="4" height="15" fill="#34d399" />
+              </svg>
+            </div>
+
+            <h3 class="course-card__title tilt-card__depth">Kerala State Board Subject Tuitions</h3>
+            <p class="course-card__desc tilt-card__depth">Group & one-on-one live classes with expert teachers. Personalised attention, real mentorship, and complete Kerala Syllabus (SCERT) coverage — online classes that feel just like offline.</p>
+
+            <ul class="course-card__features tilt-card__depth">
+              <li><span class="check-icon">✓</span> SCERT Textbook-Based Learning</li>
+              <li><span class="check-icon">✓</span> Chapter-wise Practice & Exam Preparation</li>
+              <li><span class="check-icon">✓</span> Regular Tests & Performance Tracking</li>
+            </ul>
+
+            <div class="course-card__tags tilt-card__depth">
+              <span class="course-card__tag">Kerala State Board</span>
+              <span class="course-card__tag">Grade 10–12</span>
+              <span class="course-card__tag">Maths</span>
+              <span class="course-card__tag">Science</span>
+              <span class="course-card__tag">Commerce</span>
+            </div>
+
+            <div class="course-card__actions tilt-card__depth">
+              <a href="#contact" onclick="selectCourse('kerala')" class="btn-card-primary w-100">Register Now →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. NEET / JEE Coaching (Rose) -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="competitive">
+          <div class="course-card course-card--rose tilt-card spotlight-card reveal-3d w-100" id="course-neetjee">
+            <div class="course-card__header-meta">
+              <span class="course-card__badge-pill tilt-card__depth"><span style="color:#10b981; font-size:14px; line-height:0; margin-right:4px;">●</span> LIVE • EXPERT TUTORS</span>
+              <span class="course-card__rating tilt-card__depth">★ 4.9 (1.5k+)</span>
+            </div>
+
+            <div class="course-card__screen tilt-card__icon-depth">
+              <!-- SVG for Rose (NEET/JEE) -->
+              <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="140" height="75" rx="8" fill="#450a0a" stroke="#d92534" stroke-width="2" />
+                <path d="M45 68L60 25L75 68L60 55L45 68Z" fill="#d92534" />
+                <polygon points="60,25 65,40 55,40" fill="#f87171" />
+                <circle cx="115" cy="35" r="14" fill="#991b1b" stroke="#f87171" stroke-width="2" />
+                <path d="M107 35C107 30 123 40 123 35" stroke="#fecdd3" stroke-width="2" />
+                <path d="M100 65 Q115 45 130 65" stroke="#f87171" stroke-width="2" fill="none" />
+              </svg>
+            </div>
+
+            <h3 class="course-card__title tilt-card__depth">NEET / JEE Coaching</h3>
+            <p class="course-card__desc tilt-card__depth">Group & one-on-one live classes with expert faculty. Personalised attention, real mentorship, and complete NCERT-based syllabus coverage with advanced problem-solving — online classes that feel just like offline.</p>
+
+            <ul class="course-card__features tilt-card__depth">
+              <li><span class="check-icon">✓</span> Concept Based + Advanced Problem Solving</li>
+              <li><span class="check-icon">✓</span> Chapter-wise Practice & Mock Tests</li>
+              <li><span class="check-icon">✓</span> Regular Tests & Performance Tracking</li>
+            </ul>
+
+            <div class="course-card__tags tilt-card__depth">
+              <span class="course-card__tag">NEET & JEE</span>
+              <span class="course-card__tag">Grade 11–12</span>
+              <span class="course-card__tag">Physics</span>
+              <span class="course-card__tag">Chemistry</span>
+              <span class="course-card__tag">Maths</span>
+              <span class="course-card__tag">Biology</span>
+            </div>
+
+            <div class="course-card__actions tilt-card__depth">
+              <a href="#contact" onclick="selectCourse('neet-jee')" class="btn-card-primary w-100">Register Now →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Board Exam Revision Camp (Amber) -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="revision">
+          <div class="course-card course-card--amber tilt-card spotlight-card reveal-3d w-100" id="course-revision">
+            <div class="course-card__header-meta">
+              <span class="course-card__badge-pill tilt-card__depth"><span style="color:#f43f5e; font-size:14px; line-height:0; margin-right:4px;">●</span> LIMITED SEATS • DEC–JAN BATCH</span>
+              <span class="course-card__rating tilt-card__depth">★ 4.9 (1.5k+)</span>
+            </div>
+
+            <div class="course-card__screen tilt-card__icon-depth">
+              <!-- SVG for Amber (Revision Camp) -->
+              <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="140" height="75" rx="8" fill="#451a03" stroke="#f97316" stroke-width="2" />
+                <polygon points="50,20 35,50 52,50 42,75 70,40 52,40" fill="#fbbf24" />
+                <circle cx="115" cy="45" r="18" fill="#7c2d12" stroke="#f97316" stroke-width="2" />
+                <circle cx="115" cy="45" r="12" fill="none" stroke="#fef3c7" stroke-width="1.5" stroke-dasharray="4 2" />
+                <path d="M115 35V45H123" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <h3 class="course-card__title tilt-card__depth">Board Exam Revision Camp</h3>
+            <p class="course-card__desc tilt-card__depth" style="margin-bottom: 12px;">Intensive revision for Grade 10 & 12 board exam students (CBSE & Kerala Board). Full syllabus revision, mock tests, and exam-focused mentorship to boost confidence before finals.</p>
+
+            <ul class="course-card__features tilt-card__depth" style="margin-bottom: 12px;">
+              <li><span class="check-icon">✓</span> Full Syllabus Revision</li>
+              <li><span class="check-icon">✓</span> Weekly Mock Tests & Analysis</li>
+              <li><span class="check-icon">✓</span> Doubt-Clearing with Subject Experts</li>
+              <li><span class="check-icon">✓</span> Weak-Area Diagnosis & Improvement Plan</li>
+            </ul>
+            
+            <p class="course-card__duration tilt-card__depth" style="font-size:13px; color:#cbd5e1; margin-bottom:20px;">Duration: <strong>December – January</strong></p>
+
+            <div class="course-card__tags tilt-card__depth">
+              <span class="course-card__tag">CBSE & Kerala Board</span>
+              <span class="course-card__tag">Grade 10 & 12</span>
+              <span class="course-card__tag">All Subjects</span>
+            </div>
+
+            <div class="course-card__actions tilt-card__depth">
+              <a href="#contact" onclick="selectCourse('revision')" class="btn-card-primary w-100">Reserve Your Seat →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. CBSE Tuitions (Blue) -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="boards">
+          <div class="course-card course-card--blue tilt-card spotlight-card reveal-3d w-100" id="course-cbse">
+            <div class="course-card__header-meta">
+              <span class="course-card__badge-pill tilt-card__depth"><span style="color:#10b981; font-size:14px; line-height:0; margin-right:4px;">●</span> LIVE • EXPERT TUTORS</span>
+              <span class="course-card__rating tilt-card__depth">★ 4.9 (1.5k+)</span>
+            </div>
+
+            <div class="course-card__screen tilt-card__icon-depth">
+              <!-- SVG for Blue (CBSE) -->
               <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="10" y="10" width="140" height="75" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="2" />
                 <rect x="20" y="20" width="60" height="40" rx="4" fill="#0f172a" />
@@ -272,252 +487,27 @@
             </div>
 
             <h3 class="course-card__title tilt-card__depth">CBSE Subject Tuitions</h3>
-            <p class="course-card__desc tilt-card__depth">Group & one-on-one live classes with expert teachers.
-              Personalised attention, real mentorship, and complete NCERT syllabus coverage.</p>
+            <p class="course-card__desc tilt-card__depth">Group & one-on-one classes with expert teachers — available both online and offline. Personalised attention, real mentorship, and complete CBSE & NCERT syllabus coverage.</p>
 
             <!-- Features Checklist -->
             <ul class="course-card__features tilt-card__depth">
-              <li><span class="check-icon">✓</span> NCERT Concept Mastery & Exemplar</li>
-              <li><span class="check-icon">✓</span> Chapter-wise Practice & PYQ Papers</li>
-              <li><span class="check-icon">✓</span> Live Doubt Clearing & Parent Reports</li>
+              <li><span class="check-icon">✓</span> NCERT Concept-Based Learning</li>
+              <li><span class="check-icon">✓</span> Chapter-wise Practice & Exam Preparation</li>
+              <li><span class="check-icon">✓</span> Regular Tests & Performance Tracking</li>
+              <li><span class="check-icon">✓</span> Flexible Mode — Online or Offline Classes</li>
             </ul>
 
             <div class="course-card__tags tilt-card__depth">
               <span class="course-card__tag">CBSE</span>
-              <span class="course-card__tag">Class VI-XII</span>
+              <span class="course-card__tag">Grade 8–12</span>
               <span class="course-card__tag">Maths</span>
               <span class="course-card__tag">Science</span>
-              <span class="course-card__tag">English</span>
+              <span class="course-card__tag">Commerce</span>
+              <span class="course-card__tag">Online & Offline</span>
             </div>
 
             <div class="course-card__actions tilt-card__depth">
-              <a href="#contact" onclick="selectCourse('cbse')" class="btn-card-primary">Register Now →</a>
-              <a href="#contact" class="btn-card-outline">Syllabus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. IGCSE Tuitions (Violet) -->
-        <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="boards">
-          <div class="course-card course-card--violet tilt-card spotlight-card reveal-3d w-100" id="course-igcse">
-            <div class="course-card__header-meta">
-              <span class="course-card__badge-pill tilt-card__depth">INTERNATIONAL • CAMBRIDGE</span>
-              <span class="course-card__rating tilt-card__depth">★ 4.95 (980+)</span>
-            </div>
-
-            <div class="course-card__screen tilt-card__icon-depth">
-              <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="140" height="75" rx="8" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="2" />
-                <circle cx="50" cy="45" r="22" fill="#312e81" stroke="#a78bfa" stroke-width="2" />
-                <path d="M50 23V67M28 45H72M34 32C42 38 58 38 66 32M34 58C42 52 58 52 66 58" stroke="#a78bfa"
-                  stroke-width="1.5" />
-                <path d="M100 25L115 55H95Z" fill="#8b5cf6" opacity="0.8" />
-                <circle cx="125" cy="35" r="8" fill="#ec4899" />
-                <rect x="90" y="65" width="50" height="4" rx="2" fill="#4338ca" />
-              </svg>
-            </div>
-
-            <h3 class="course-card__title tilt-card__depth">IGCSE Tuitions</h3>
-            <p class="course-card__desc tilt-card__depth">Expert guidance for Cambridge IGCSE curriculum with past paper
-              solving, marking scheme training, and interactive assessments.</p>
-
-            <!-- Features Checklist -->
-            <ul class="course-card__features tilt-card__depth">
-              <li><span class="check-icon">✓</span> Past Paper Solving & Marking Schemes</li>
-              <li><span class="check-icon">✓</span> Extended & Core Curriculum Coverage</li>
-              <li><span class="check-icon">✓</span> Cambridge Certified Expert Tutors</li>
-            </ul>
-
-            <div class="course-card__tags tilt-card__depth">
-              <span class="course-card__tag">IGCSE</span>
-              <span class="course-card__tag">GCSE</span>
-              <span class="course-card__tag">Physics</span>
-              <span class="course-card__tag">Chemistry</span>
-              <span class="course-card__tag">Maths</span>
-            </div>
-
-            <div class="course-card__actions tilt-card__depth">
-              <a href="#contact" onclick="selectCourse('igcse')" class="btn-card-primary">Register Now →</a>
-              <a href="#contact" class="btn-card-outline">Syllabus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. IB Programme (Cyan) -->
-        <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="boards">
-          <div class="course-card course-card--cyan tilt-card spotlight-card reveal-3d w-100" id="course-ib">
-            <div class="course-card__header-meta">
-              <span class="course-card__badge-pill tilt-card__depth">PREMIUM • DIPLOMA</span>
-              <span class="course-card__rating tilt-card__depth">★ 5.0 (720+)</span>
-            </div>
-
-            <div class="course-card__screen tilt-card__icon-depth">
-              <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="140" height="75" rx="8" fill="#083344" stroke="#06b6d4" stroke-width="2" />
-                <polygon points="50,22 60,42 82,42 64,54 70,75 50,62 30,75 36,54 18,42 40,42" fill="#06b6d4" />
-                <rect x="95" y="25" width="40" height="25" rx="4" fill="#155e75" />
-                <path d="M100 35H125M100 42H115" stroke="#67e8f9" stroke-width="2" stroke-linecap="round" />
-                <text x="95" y="66" fill="#22d3ee" font-size="12" font-weight="bold"
-                  font-family="sans-serif">E=mc²</text>
-              </svg>
-            </div>
-
-            <h3 class="course-card__title tilt-card__depth">IB Programme</h3>
-            <p class="course-card__desc tilt-card__depth">Specialized tuitions for International Baccalaureate (IB) DP &
-              MYP students covering HL and SL subjects with IA and EE guidance.</p>
-
-            <!-- Features Checklist -->
-            <ul class="course-card__features tilt-card__depth">
-              <li><span class="check-icon">✓</span> IB DP Higher Level (HL) & Standard (SL)</li>
-              <li><span class="check-icon">✓</span> Internal Assessment (IA) Mentorship</li>
-              <li><span class="check-icon">✓</span> Extended Essay (EE) & TOK Support</li>
-            </ul>
-
-            <div class="course-card__tags tilt-card__depth">
-              <span class="course-card__tag">IB HL</span>
-              <span class="course-card__tag">IB SL</span>
-              <span class="course-card__tag">MYP</span>
-              <span class="course-card__tag">IA Support</span>
-              <span class="course-card__tag">EE Guidance</span>
-            </div>
-
-            <div class="course-card__actions tilt-card__depth">
-              <a href="#contact" onclick="selectCourse('ib')" class="btn-card-primary">Register Now →</a>
-              <a href="#contact" class="btn-card-outline">Syllabus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Kerala Board (Emerald) -->
-        <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="boards">
-          <div class="course-card course-card--emerald tilt-card spotlight-card reveal-3d w-100" id="course-kb">
-            <div class="course-card__header-meta">
-              <span class="course-card__badge-pill tilt-card__depth">REGIONAL • SCERT</span>
-              <span class="course-card__rating tilt-card__depth">★ 4.9 (2.1k+)</span>
-            </div>
-
-            <div class="course-card__screen tilt-card__icon-depth">
-              <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="140" height="75" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2" />
-                <path d="M30 30C30 30 50 25 70 30V70C50 65 30 70 30 70V30Z" fill="#047857" />
-                <path d="M70 30C70 30 90 25 110 30V70C90 65 70 70 70 70V30Z" fill="#059669" />
-                <polygon points="125,25 140,32 125,39 110,32" fill="#34d399" />
-                <rect x="123" y="36" width="4" height="15" fill="#34d399" />
-              </svg>
-            </div>
-
-            <h3 class="course-card__title tilt-card__depth">Kerala Board Subject Tuitions</h3>
-            <p class="course-card__desc tilt-card__depth">Comprehensive tuition for Kerala State Board (KBPE/SCERT)
-              syllabus. Bilingual support in English and Malayalam for effortless understanding.</p>
-
-            <!-- Features Checklist -->
-            <ul class="course-card__features tilt-card__depth">
-              <li><span class="check-icon">✓</span> SSLC, Plus One & Plus Two SCERT</li>
-              <li><span class="check-icon">✓</span> Bilingual English & Malayalam Tutors</li>
-              <li><span class="check-icon">✓</span> Public Exam Model Question Practice</li>
-            </ul>
-
-            <div class="course-card__tags tilt-card__depth">
-              <span class="course-card__tag">SSLC</span>
-              <span class="course-card__tag">Plus One</span>
-              <span class="course-card__tag">Plus Two</span>
-              <span class="course-card__tag">SCERT</span>
-              <span class="course-card__tag">Malayalam/Eng</span>
-            </div>
-
-            <div class="course-card__actions tilt-card__depth">
-              <a href="#contact" onclick="selectCourse('kerala')" class="btn-card-primary">Register Now →</a>
-              <a href="#contact" class="btn-card-outline">Syllabus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. NEET / JEE Coaching (Rose/Red) -->
-        <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="competitive">
-          <div class="course-card course-card--rose tilt-card spotlight-card reveal-3d w-100" id="course-neetjee">
-            <div class="course-card__header-meta">
-              <span class="course-card__badge-pill tilt-card__depth">24/7 • AI & LIVE COACHING</span>
-              <span class="course-card__rating tilt-card__depth">★ 4.98 (3.4k+)</span>
-            </div>
-
-            <div class="course-card__screen tilt-card__icon-depth">
-              <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="140" height="75" rx="8" fill="#450a0a" stroke="#d92534" stroke-width="2" />
-                <path d="M45 68L60 25L75 68L60 55L45 68Z" fill="#d92534" />
-                <polygon points="60,25 65,40 55,40" fill="#f87171" />
-                <circle cx="115" cy="35" r="14" fill="#991b1b" stroke="#f87171" stroke-width="2" />
-                <path d="M107 35C107 30 123 40 123 35" stroke="#fecdd3" stroke-width="2" />
-                <path d="M100 65 Q115 45 130 65" stroke="#f87171" stroke-width="2" fill="none" />
-              </svg>
-            </div>
-
-            <h3 class="course-card__title tilt-card__depth">NEET / JEE Coaching</h3>
-            <p class="course-card__desc tilt-card__depth">Intensive coaching for medical & engineering entrance exams.
-              Complete syllabus coverage, adaptive mock tests & rank boosters.</p>
-
-            <!-- Features Checklist -->
-            <ul class="course-card__features tilt-card__depth">
-              <li><span class="check-icon">✓</span> Physics, Chemistry, Biology & Maths</li>
-              <li><span class="check-icon">✓</span> All-India Rank Test Series (AIR)</li>
-              <li><span class="check-icon">✓</span> 1-on-1 Speed & Accuracy Drills</li>
-            </ul>
-
-            <div class="course-card__tags tilt-card__depth">
-              <span class="course-card__tag">NEET</span>
-              <span class="course-card__tag">JEE Main</span>
-              <span class="course-card__tag">JEE Adv</span>
-              <span class="course-card__tag">Physics</span>
-              <span class="course-card__tag">Biology</span>
-            </div>
-
-            <div class="course-card__actions tilt-card__depth">
-              <a href="#contact" onclick="selectCourse('neet-jee')" class="btn-card-primary">Register Now →</a>
-              <a href="#contact" class="btn-card-outline">Syllabus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Online Revision Camp (Amber) -->
-        <div class="col-12 col-md-6 col-lg-4 d-flex" data-category="revision">
-          <div class="course-card course-card--amber tilt-card spotlight-card reveal-3d w-100" id="course-revision">
-            <div class="course-card__header-meta">
-              <span class="course-card__badge-pill tilt-card__depth">SEASONAL • FAST TRACK</span>
-              <span class="course-card__rating tilt-card__depth">★ 4.92 (1.8k+)</span>
-            </div>
-
-            <div class="course-card__screen tilt-card__icon-depth">
-              <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="140" height="75" rx="8" fill="#451a03" stroke="#f97316" stroke-width="2" />
-                <polygon points="50,20 35,50 52,50 42,75 70,40 52,40" fill="#fbbf24" />
-                <circle cx="115" cy="45" r="18" fill="#7c2d12" stroke="#f97316" stroke-width="2" />
-                <circle cx="115" cy="45" r="12" fill="none" stroke="#fef3c7" stroke-width="1.5"
-                  stroke-dasharray="4 2" />
-                <path d="M115 35V45H123" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </div>
-
-            <h3 class="course-card__title tilt-card__depth">Online Revision Camp</h3>
-            <p class="course-card__desc tilt-card__depth">High-impact revision camps for Class X, XI & XII students.
-              Rapid concept reviews, previous year questions, and exam sprint strategies.</p>
-
-            <!-- Features Checklist -->
-            <ul class="course-card__features tilt-card__depth">
-              <li><span class="check-icon">✓</span> Rapid 30-Day Complete Syllabus Re-cap</li>
-              <li><span class="check-icon">✓</span> Top 100 High-Yield Exam Questions</li>
-              <li><span class="check-icon">✓</span> Mock Board Exams & Instant Valuation</li>
-            </ul>
-
-            <div class="course-card__tags tilt-card__depth">
-              <span class="course-card__tag">Class X</span>
-              <span class="course-card__tag">Class XI</span>
-              <span class="course-card__tag">Class XII</span>
-              <span class="course-card__tag">Mock Tests</span>
-              <span class="course-card__tag">Exam Tips</span>
-            </div>
-
-            <div class="course-card__actions tilt-card__depth">
-              <a href="#contact" onclick="selectCourse('revision')" class="btn-card-primary">Register Now →</a>
-              <a href="#contact" class="btn-card-outline">Syllabus</a>
+              <a href="#contact" onclick="selectCourse('cbse')" class="btn-card-primary w-100">Register Now →</a>
             </div>
           </div>
         </div>
@@ -548,20 +538,6 @@
 
             </div>
 
-            <!-- 2. Commerce -->
-            <div class="subject-item">
-              <div class="subject-icon-box tilt-card__icon-depth subject-icon--commerce">
-                <div class="subject-orbit"></div>
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="18" y="36" width="6" height="16" rx="2" fill="#3b82f6" />
-                  <rect x="29" y="24" width="6" height="28" rx="2" fill="#10b981" />
-                  <rect x="40" y="12" width="6" height="40" rx="2" fill="#f59e0b" />
-                  <path d="M12 56H52" stroke="#64748b" stroke-width="3" stroke-linecap="round" />
-                </svg>
-              </div>
-              <span class="subject-name tilt-card__depth">Commerce</span>
-
-            </div>
 
             <!-- 3. Physics -->
             <div class="subject-item">
@@ -627,6 +603,21 @@
               <span class="subject-name tilt-card__depth">Computer Science</span>
 
             </div>
+
+            <!-- 8. Commerce -->
+            <div class="subject-item">
+              <div class="subject-icon-box tilt-card__icon-depth subject-icon--commerce">
+                <div class="subject-orbit"></div>
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="18" y="36" width="6" height="16" rx="2" fill="#3b82f6" />
+                  <rect x="29" y="24" width="6" height="28" rx="2" fill="#10b981" />
+                  <rect x="40" y="12" width="6" height="40" rx="2" fill="#f59e0b" />
+                  <path d="M12 56H52" stroke="#64748b" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </div>
+              <span class="subject-name tilt-card__depth">Commerce</span>
+
+            </div>
           </div>
         </div>
       </div>
@@ -643,66 +634,57 @@
     <section class="section" id="why-us">
       <div class="container">
         <div class="section__header reveal">
-          <div class="section__tag">Why Choose ZETA</div>
-          <h2 class="section__title">The ZETA Advantage</h2>
-          <p class="section__subtitle">What makes ZETA CLASSES the preferred choice for students and parents worldwide.
+          <h2 class="section__title">Built for Results Parents Trust,<br><span class="text-gradient">and Learning Students Enjoy</span></h2>
+          <p class="section__subtitle">Every part of the Zeta experience is designed to keep students confident and parents informed — every step of the way.
           </p>
         </div>
 
         <div class="row g-4">
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-expert">
-              <div class="feature-card__icon tilt-card__icon-depth">👨‍🏫</div>
-              <h3 class="feature-card__title tilt-card__depth">Expert Faculty</h3>
-              <p class="feature-card__desc tilt-card__depth">Handpicked, experienced educators with a proven track
-                record
-                in
-                their respective boards and competitive exam coaching.</p>
+              <div class="feature-card__icon tilt-card__icon-depth">🎓</div>
+              <h3 class="feature-card__title tilt-card__depth">Handpicked Expert Faculty</h3>
+              <p class="feature-card__desc tilt-card__depth">Every teacher at Zeta is carefully selected for subject mastery and teaching experience across CBSE, Kerala Board & IGCSE. Parents can trust real qualified mentors — not just tutors — guiding their child.</p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-personalized">
               <div class="feature-card__icon tilt-card__icon-depth">🎯</div>
-              <h3 class="feature-card__title tilt-card__depth">Personalized Learning</h3>
-              <p class="feature-card__desc tilt-card__depth">Customized study plans tailored to each student's pace,
-                learning style, and target goals for maximum effectiveness.</p>
+              <h3 class="feature-card__title tilt-card__depth">Personalised Learning Path</h3>
+              <p class="feature-card__desc tilt-card__depth">No two students learn the same way. We build a custom study plan around your child's pace, strengths, and weak areas — so effort turns into real results, not guesswork.</p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-interactive">
-              <div class="feature-card__icon tilt-card__icon-depth">💻</div>
-              <h3 class="feature-card__title tilt-card__depth">Interactive Live Classes</h3>
-              <p class="feature-card__desc tilt-card__depth">Engaging live sessions with real-time doubt clearing,
-                digital
-                whiteboards, and interactive assessments.</p>
+              <div class="feature-card__icon tilt-card__icon-depth">💬</div>
+              <h3 class="feature-card__title tilt-card__depth">Live Doubt-Clearing, Anytime</h3>
+              <p class="feature-card__desc tilt-card__depth">Students never get stuck. Every class comes with real-time doubt solving, so confusion gets cleared in the moment — not days later. Confidence builds session by session.</p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-materials">
-              <div class="feature-card__icon tilt-card__icon-depth">📋</div>
-              <h3 class="feature-card__title tilt-card__depth">Comprehensive Materials</h3>
-              <p class="feature-card__desc tilt-card__depth">Curated study materials, practice worksheets, previous year
-                papers, and chapter-wise notes for thorough preparation.</p>
+              <div class="feature-card__icon tilt-card__icon-depth">📚</div>
+              <h3 class="feature-card__title tilt-card__depth">Complete Study Toolkit</h3>
+              <p class="feature-card__desc tilt-card__depth">Chapter-wise notes, practice worksheets, and previous year papers — all curated by our faculty. Students walk into every exam fully prepared, not scrambling last minute.</p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-tracking">
-              <div class="feature-card__icon tilt-card__icon-depth">📊</div>
-              <h3 class="feature-card__title tilt-card__depth">Progress Tracking</h3>
-              <p class="feature-card__desc tilt-card__depth">Regular assessments, detailed performance reports, and
-                parent-teacher meetings to ensure continuous improvement.</p>
+              <div class="feature-card__icon tilt-card__icon-depth">📈</div>
+              <h3 class="feature-card__title tilt-card__depth">Transparent Progress Reports</h3>
+              <p class="feature-card__desc tilt-card__depth">Regular tests, performance reports, and parent-teacher updates keep families in the loop. Parents always know exactly how their child is progressing — no surprises at report card time.</p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-flexible">
-              <div class="feature-card__icon tilt-card__icon-depth">🕐</div>
-              <h3 class="feature-card__title tilt-card__depth">Flexible Scheduling</h3>
-              <p class="feature-card__desc tilt-card__depth">Classes available across mult
+              <div class="feature-card__icon tilt-card__icon-depth">🕒</div>
+              <h3 class="feature-card__title tilt-card__depth">Learn Your Way — Online or Offline</h3>
+              <p class="feature-card__desc tilt-card__depth">Flexible batch timings and both online & offline options mean learning fits into your family's schedule, not the other way around.
                 <!-- ═══ ABOUT / SPLIT ═══ -->
               </p>
 
@@ -711,22 +693,25 @@
         </div>
       </div>
     </section>
-    <section class="section" id="about">
+    <section class="section py-2" id="about">
       <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-12 col-lg-6 reveal-left">
-            <img src="images/online-learning.png" alt="Online learning illustration"
-              class="split__image tilt-card w-100" />
-          </div>
-          <div class="col-12 col-lg-6 reveal-right">
-            <div class="split__tag">About ZETA CLASSES</div>
-            <h2 class="split__title">Shaping Futures Through Quality Education</h2>
-            <p class="split__text">
-              ZETA CLASSES Educational Services is a premier online tutoring platform that bridges the gap between
-              quality
-              education and accessibility. We connect students globally with expert educators, offering structured and
-              personalized learning experiences.
+        <!-- Centered Header Row -->
+        <div class="row mb-2 text-center">
+          <div class="col-12 col-lg-8 mx-auto reveal-up">
+            <h2 class="split__title">Shaping Futures Through<br><span class="text-gradient">Quality Education</span></h2>
+            <p class="split__text mx-auto">
+              Zeta Classes Educational Services is a trusted tutoring platform that bridges the gap between quality<br class="d-none d-md-block">education and accessibility. We connect students with expert educators through both online and offline<br class="d-none d-md-block">classes, offering structured, personalised learning experiences — whichever mode fits your child best.
             </p>
+          </div>
+        </div>
+
+        <!-- Side-by-side Content Row -->
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-5 reveal-left text-center mx-auto">
+            <img src="images/online-learning.png" alt="Online learning illustration"
+              class="split__image tilt-card w-100 mx-auto d-block" style="max-width: 90%;" />
+          </div>
+          <div class="col-12 col-lg-7 reveal-right">
             <ul class="split__list">
               <li class="split__list-item">
                 <span class="check">✓</span>
@@ -734,7 +719,7 @@
               </li>
               <li class="split__list-item">
                 <span class="check">✓</span>
-                Live interactive classes with recorded sessions
+                Live interactive classes — online & offline, with recorded sessions
               </li>
               <li class="split__list-item">
                 <span class="check">✓</span>
@@ -748,8 +733,18 @@
                 <span class="check">✓</span>
                 Regular parent-teacher meetings and progress reports
               </li>
+              <li class="split__list-item">
+                <span class="check">✓</span>
+                Self-paced Web Platform — animated NCERT-aligned video classes,<br class="d-none d-md-block">practice questions, digital notes, mock exams and parent insights<br class="d-none d-md-block">— Nursery to Grade 12
+              </li>
+              <li class="split__list-item">
+                <span class="check">✓</span>
+                Daycare support — a supervised space for the hours after school,<br class="d-none d-md-block">with homework help, guided reading and play, hosted live by<br class="d-none d-md-block">trained mentors
+              </li>
             </ul>
-            <a href="#enroll" class="btn btn--primary" id="about-cta">Start Learning Today</a>
+            <div class="text-center text-lg-start">
+              <a href="#enroll" class="btn btn--primary mt-2" id="about-cta">Start Learning Today</a>
+            </div>
           </div>
         </div>
       </div>
