@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZETA CLASSES — Daycare</title>
+  <meta name="description" content="A supervised online space for the hours after school — homework help, guided reading and play, hosted live by trained mentors." />
+  <meta name="theme-color" content="#0a0e27" />
+
+  <!-- Bootstrap 5 Grid System CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow--1"></div>
+  <div class="bg-glow bg-glow--2"></div>
+  
+  <canvas id="particles-canvas" style="position: absolute; left: 0; top: 0; width: 100%; pointer-events: none; z-index: 0;"></canvas>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <nav class="container nav">
+      <a href="index.html" class="nav__brand" id="nav-brand">
+        <img src="images/logo.png" alt="ZETA CLASSES Logo" class="nav__logo" />
+      </a>
+
+      <div class="nav__links" id="nav-links">
+        <a href="index.html#home" class="nav__link">HOME</a>
+        <a href="index.html#courses" class="nav__link">COURSES</a>
+        <a href="daycare.html" class="nav__link active">DAYCARE</a>
+        <a href="index.html#about" class="nav__link">ABOUT US</a>
+        <a href="index.html#contact" class="nav__link">CONTACT</a>
+      </div>
+
+      <div class="nav__actions" style="display: flex; gap: 10px;">
+        <a href="#login" class="nav__cta" style="background: var(--brand-blue-light); color: white; padding: 12px 36px;">
+          User Login
+        </a>
+        <a href="#enroll" class="nav__cta" style="background: var(--brand-red); color: white; padding: 12px 36px;">
+          Register Now
+        </a>
+      </div>
+
+      <button class="nav__burger" id="nav-burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html#home" onclick="closeMobile()">🏠 Home</a>
+      <a href="index.html#courses" onclick="closeMobile()">📚 Courses</a>
+      <a href="daycare.html" onclick="closeMobile()">🎒 Daycare</a>
+      <a href="index.html#why-us" onclick="closeMobile()">⭐ Why Us</a>
+      <a href="index.html#about" onclick="closeMobile()">🏫 About</a>
+      <a href="index.html#contact" onclick="closeMobile()">📞 Contact</a>
+    </div>
+  </header>
+
+  <!-- ═══ DAYCARE HERO ═══ -->
+  <section class="daycare-hero" id="home">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <!-- Left Content -->
+        <div class="col-12 col-lg-6 reveal-left">
+
+
+          <div class="daycare-hero__meta mt-5">
+            <span class="meta-line">4:00-7:00 PM • EVERY SCHOOL DAY</span>
+          </div>
+
+          <h2 class="hero__title mt-2" style="font-size: 3.5rem;">
+            School's out.<br><span class="highlight text-gradient">We log in.</span>
+          </h2>
+
+          <p class="hero__subtitle mt-4 mb-4">
+            A daily online class where your child finishes homework and gets doubts cleared by a real teacher — right after school, from home.
+          </p>
+
+          <p class="hero__subtitle" style="font-size: 15px;">
+            The moment the bus drops them home, they join Zeta Classes on Zoom. A mentor keeps them on track, and if they get stuck on a question, a subject teacher is right there to help — no pickup, no drop, no separate tuition for every subject.
+          </p>
+
+          <div class="hero__actions mt-5 justify-content-start reveal-up" style="gap: 16px;">
+            <a href="#enroll" class="btn glass-btn glass-btn-red" style="border-radius: 50px; font-weight: bold; padding: 12px 32px;">
+              Book a free trial class
+            </a>
+            <a href="#how-it-runs" class="btn glass-btn" style="border-radius: 50px; background: rgba(255,255,255,0.05); padding: 12px 32px;">
+              See how a session runs
+            </a>
+          </div>
+
+          <div class="daycare-hero__tags mt-4">
+            GRADES 1-10 • MENTOR-LED • ZOOM-BASED • SAME MODEL, SIX COUNTRIES
+          </div>
+        </div>
+
+        <!-- Right Content: Schedule Grid -->
+        <div class="col-12 col-lg-6 reveal-right">
+          <div class="schedule-grid-container">
+            <div class="schedule-header">
+              <h4>Live across the Gulf</h4>
+              <p>updated 15:38 (your device time)</p>
+            </div>
+            
+            <div class="schedule-grid">
+              <div class="schedule-card">
+                <span class="country">UAE</span>
+                <span class="time">14:08</span>
+                <span class="session-time"><span class="dot"></span> Session 4-7 PM</span>
+              </div>
+              <div class="schedule-card">
+                <span class="country">Oman</span>
+                <span class="time">14:08</span>
+                <span class="session-time"><span class="dot"></span> Session 4-7 PM</span>
+              </div>
+              <div class="schedule-card">
+                <span class="country">Saudi Arabia</span>
+                <span class="time">13:08</span>
+                <span class="session-time"><span class="dot"></span> Session 4-7 PM</span>
+              </div>
+              <div class="schedule-card">
+                <span class="country">Qatar</span>
+                <span class="time">13:08</span>
+                <span class="session-time"><span class="dot"></span> Session 4-7 PM</span>
+              </div>
+              <div class="schedule-card">
+                <span class="country">Kuwait</span>
+                <span class="time">13:08</span>
+                <span class="session-time"><span class="dot"></span> Session 4-7 PM</span>
+              </div>
+              <div class="schedule-card">
+                <span class="country">Bahrain</span>
+                <span class="time">13:08</span>
+                <span class="session-time"><span class="dot"></span> Session 4-7 PM</span>
+              </div>
+            </div>
+
+            <div class="schedule-footer mt-3">
+              Session window is <strong>4:00-7:00 PM local time</strong> in every country — your child's session always lines up with your own evening, not ours.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VALUE PROPOSITION (CREAM BG) ═══ -->
+  <section class="daycare-value-prop">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-12 col-md-4 d-flex reveal-up">
+          <div class="value-item value-item--blue">
+            <div class="value-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h4 class="value-item__title">The bus drops them home early.</h4>
+            <p class="value-item__desc">Work often doesn't end till evening. That's a long, unsupervised stretch on a school night — in every Gulf city.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 d-flex reveal-up" style="transition-delay: 0.1s;">
+          <div class="value-item value-item--red">
+            <div class="value-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path></svg>
+            </div>
+            <h4 class="value-item__title">Study centres cost more.</h4>
+            <p class="value-item__desc">Pickup, drop, and a physical seat push most centres well past what an online room needs to charge.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 d-flex reveal-up" style="transition-delay: 0.2s;">
+          <div class="value-item value-item--navy">
+            <div class="value-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <h4 class="value-item__title">One tutor, one subject.</h4>
+            <p class="value-item__desc">Private tuition rarely covers the whole timetable, and rarely travels with a family that relocates within the Gulf.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW A SESSION RUNS ═══ -->
+  <section class="daycare-how-it-runs" id="how-it-runs">
+    <div class="container">
+      <div class="how-header reveal">
+        <span class="section__tag" style="margin-bottom: 8px;">HOW A SESSION RUNS</span>
+        <h2 class="section__title text-gradient" style="max-width: 600px; font-size: 2.2rem; line-height: 1.2; margin-bottom: 16px; display: block;">One room for homework.<br>A door to a teacher for every subject.</h2>
+        <p class="section__subtitle dark-text" style="max-width: 600px; font-size: 1.05rem; line-height: 1.6; display: block;">The mentor never teaches — they watch, track, and send a raised hand into the right breakout. Subject teachers wait there, on call, for the entire window.</p>
+      </div>
+
+      <div class="row mt-4 g-5 align-items-start">
+        <!-- Interactive Zoom UI -->
+        <div class="col-12 col-lg-6 reveal-left">
+          <div class="zoom-ui">
+            <div class="zoom-ui__header">
+              <span>— LIVE ZOOM ROOM</span>
+            </div>
+            
+            <div class="zoom-ui__main-room">
+              <h5>Main Room · up to 15 students</h5>
+              <p>Mentor on camera — attendance, homework check, quiet study</p>
+            </div>
+            
+            <div class="zoom-ui__arrow">
+              ↓ doubt raised → sent to breakout ↓
+            </div>
+
+            <div class="zoom-ui__breakouts">
+              <div class="breakout-card breakout-card--blue">
+                <strong>Math</strong>
+                <span>teacher on call</span>
+              </div>
+              <div class="breakout-card breakout-card--red">
+                <strong>Science</strong>
+                <span>teacher on call</span>
+              </div>
+              <div class="breakout-card breakout-card--navy">
+                <strong>English</strong>
+                <span>teacher on call</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Steps list -->
+        <div class="col-12 col-lg-6 reveal-right">
+          <div class="session-steps">
+            <div class="session-step">
+              <div class="step-num step-num--1">1</div>
+              <div class="step-content">
+                <h5>Roll call and homework check</h5>
+                <p>First ten minutes — the mentor logs who's here and what's due today.</p>
+              </div>
+            </div>
+            <div class="session-step mt-4">
+              <div class="step-num step-num--2">2</div>
+              <div class="step-content">
+                <h5>Quiet study, doubts flagged</h5>
+                <p>Students work through homework on camera; a raised hand routes them straight to that subject's breakout room.</p>
+              </div>
+            </div>
+            <div class="session-step mt-4">
+              <div class="step-num step-num--3">3</div>
+              <div class="step-content">
+                <h5>Stay on for Extended Study Hall</h5>
+                <p>Hour 1 done but more to finish? Sessions can continue into a larger, quietly-monitored study room — try the durations below.</p>
+                
+                <div class="duration-selector mt-3">
+                  <span class="duration-label">How long does a session run?</span>
+                  <div class="duration-pills mt-2" id="duration-pills">
+                    <span class="pill active" onclick="setDuration(1, this)">1 hour</span>
+                    <span class="pill" onclick="setDuration(2, this)">2 hours</span>
+                    <span class="pill" onclick="setDuration(3, this)">Up to 3 hours</span>
+                  </div>
+                  <div class="duration-timeline mt-3">
+                    <div class="timeline-bar">
+                      <div class="timeline-fill" id="timeline-fill" style="width: 33.33%;"></div>
+                    </div>
+                    <div class="timeline-labels">
+                      <span>4:00</span>
+                      <span>5:00</span>
+                      <span>6:00</span>
+                      <span>7:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GROUPED BY GRADE ═══ -->
+  <section class="daycare-grades">
+    <div class="container">
+      <div class="grades-header reveal">
+        <span class="section__tag" style="display: block; margin-bottom: 8px;">ANY SCHOOL, ANY TEXTBOOK</span>
+        <h2 class="section__title text-gradient" style="max-width: 600px; font-size: 2.2rem; line-height: 1.2; margin-bottom: 16px; display: block;">Grouped by grade — not by which book your school follows</h2>
+        <p class="section__subtitle dark-text" style="max-width: 600px; font-size: 1.05rem; line-height: 1.6; display: block;">CBSE syllabus is the same skeleton everywhere in the Gulf. Your child brings their own homework and textbook to the room; our teachers work from whatever page is on the screen.</p>
+      </div>
+
+      <div class="row mt-2 g-4 align-items-center courses-grid-row">
+        <!-- Left Image -->
+        <div class="col-12 col-lg-3 d-none d-lg-block reveal-left">
+          <div class="grade-img-wrapper">
+            <img src="student_homework_3d_1787052353315.jpg" alt="Student doing homework" class="img-fluid w-100">
+          </div>
+        </div>
+
+        <!-- Center 2x2 Grid -->
+        <div class="col-12 col-lg-6">
+          <div class="row g-4">
+            <div class="col-12 col-md-6 d-flex reveal-up" style="transition-delay: 0.1s;">
+              <div class="grade-card w-100">
+                <span class="grade-range">GRADES 1-3</span>
+                <h4 class="grade-title">Foundation</h4>
+                <p class="grade-desc">Reading, writing, and basic Maths/EVS homework support.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex reveal-up" style="transition-delay: 0.2s;">
+              <div class="grade-card w-100">
+                <span class="grade-range">GRADES 4-6</span>
+                <h4 class="grade-title">Primary</h4>
+                <p class="grade-desc">Maths, Science, English, Social — homework plus concept doubts.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex reveal-up" style="transition-delay: 0.3s;">
+              <div class="grade-card w-100">
+                <span class="grade-range">GRADES 7-8</span>
+                <h4 class="grade-title">Middle</h4>
+                <p class="grade-desc">Subject-specific doubt clearing becomes the main focus.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex reveal-up" style="transition-delay: 0.4s;">
+              <div class="grade-card w-100">
+                <span class="grade-range">GRADES 9-10</span>
+                <h4 class="grade-title">Secondary</h4>
+                <p class="grade-desc">Board-pattern practice and exam-technique support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="col-12 col-lg-3 d-none d-lg-block reveal-right">
+          <div class="grade-img-wrapper">
+            <img src="teacher_online_3d_1787052462430.jpg" alt="Teacher on video call" class="img-fluid w-100">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ COUNTRIES ═══ -->
+  <section class="daycare-countries reveal-up">
+    <div class="container">
+      <div class="grades-header reveal">
+        <span class="section__tag" style="display: block; margin-bottom: 8px;">WHERE WE RUN</span>
+        <h2 class="section__title text-gradient" style="max-width: 600px; font-size: 2.2rem; line-height: 1.2; margin-bottom: 16px; display: block;">Same room, six countries, your own local evening</h2>
+        <p class="section__subtitle dark-text" style="max-width: 600px; font-size: 1.05rem; line-height: 1.6; display: block;">Every country keeps its own school week and its own 4-7 PM window — nothing is forced onto a foreign clock.</p>
+      </div>
+
+      <div class="country-grid">
+        <div class="country-card tilt-card">
+          <div class="country-card__info tilt-card__depth">
+            <h5>UAE</h5>
+            <p>Sessions <strong>Mon-Fri</strong> · GST (UTC+4)</p>
+          </div>
+          <span class="country-card__track tilt-card__depth">Track A</span>
+        </div>
+        <div class="country-card tilt-card">
+          <div class="country-card__info tilt-card__depth">
+            <h5>Oman</h5>
+            <p>Sessions <strong>Sun-Thu</strong> · GST (UTC+4)</p>
+          </div>
+          <span class="country-card__track tilt-card__depth">Track A</span>
+        </div>
+        <div class="country-card tilt-card">
+          <div class="country-card__info tilt-card__depth">
+            <h5>Saudi Arabia</h5>
+            <p>Sessions <strong>Sun-Thu</strong> · AST (UTC+3)</p>
+          </div>
+          <span class="country-card__track track-b tilt-card__depth">Track B</span>
+        </div>
+        <div class="country-card tilt-card">
+          <div class="country-card__info tilt-card__depth">
+            <h5>Qatar</h5>
+            <p>Sessions <strong>Sun-Thu</strong> · AST (UTC+3)</p>
+          </div>
+          <span class="country-card__track track-b tilt-card__depth">Track B</span>
+        </div>
+        <div class="country-card tilt-card">
+          <div class="country-card__info tilt-card__depth">
+            <h5>Kuwait</h5>
+            <p>Sessions <strong>Sun-Thu</strong> · AST (UTC+3)</p>
+          </div>
+          <span class="country-card__track track-b tilt-card__depth">Track B</span>
+        </div>
+        <div class="country-card tilt-card">
+          <div class="country-card__info tilt-card__depth">
+            <h5>Bahrain</h5>
+            <p>Sessions <strong>Sun-Thu</strong> · AST (UTC+3)</p>
+          </div>
+          <span class="country-card__track track-b tilt-card__depth">Track B</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PLANS ═══ -->
+  <section class="daycare-plans reveal-up">
+    <div class="container">
+      <div class="grades-header reveal">
+        <span class="section__tag" style="display: block; margin-bottom: 8px;">PLANS</span>
+        <h2 class="section__title text-gradient" style="max-width: 600px; font-size: 2.2rem; line-height: 1.2; margin-bottom: 16px; display: block;">Three durations, one standard of attention.</h2>
+        <p class="section__subtitle dark-text" style="max-width: 600px; font-size: 1.05rem; line-height: 1.6; display: block;">Every plan gets the same mentor ratio and the same subject-teacher access. Longer plans just mean more supervised study time.</p>
+      </div>
+
+      <div class="plan-grid">
+        <div class="plan-card">
+          <h4 class="plan-title">Basic</h4>
+          <p class="plan-subtitle">1 Hour · Core Only</p>
+          <div class="plan-features">
+            <div class="plan-feature"><span class="check">✓</span> Homework check-in and doubt clearing</div>
+            <div class="plan-feature"><span class="check">✓</span> Shared subject-teacher breakout access</div>
+            <div class="plan-feature"><span class="check">✓</span> Daily WhatsApp attendance note</div>
+          </div>
+          <a href="#trial" class="btn-plan glass-btn glass-btn-blue">Ask about Basic</a>
+        </div>
+
+        <div class="plan-card">
+          <h4 class="plan-title">Standard</h4>
+          <p class="plan-subtitle">2 Hours · +Study Hall</p>
+          <div class="plan-features">
+            <div class="plan-feature"><span class="check">✓</span> Everything in Basic</div>
+            <div class="plan-feature"><span class="check">✓</span> 1 extra hour of monitored self-study</div>
+            <div class="plan-feature"><span class="check">✓</span> Faster breakout queue priority</div>
+            <div class="plan-feature"><span class="check">✓</span> Weekly progress report</div>
+          </div>
+          <a href="#trial" class="btn-plan glass-btn glass-btn-red">Ask about Standard</a>
+        </div>
+
+        <div class="plan-card">
+          <h4 class="plan-title">Premium</h4>
+          <p class="plan-subtitle">Up to 3 Hours</p>
+          <div class="plan-features">
+            <div class="plan-feature"><span class="check">✓</span> Everything in Standard</div>
+            <div class="plan-feature"><span class="check">✓</span> Full 3-hour monitored window</div>
+            <div class="plan-feature"><span class="check">✓</span> Top-priority breakout access</div>
+            <div class="plan-feature"><span class="check">✓</span> Bi-weekly parent call + weekend hour</div>
+          </div>
+          <a href="#trial" class="btn-plan glass-btn glass-btn-navy">Ask about Premium</a>
+        </div>
+      </div>
+      <p class="plan-disclaimer">Pricing is set per country and shared during your free trial call — reach out below and we'll confirm the plan that fits your evening.</p>
+    </div>
+  </section>
+
+  <!-- ═══ FREE TRIAL ═══ -->
+  <section class="daycare-trial reveal-up" id="trial">
+    <div class="container trial-container">
+      <div class="trial-info">
+        <span class="section__tag" style="display: block; margin-bottom: 8px;">FREE TRIAL</span>
+        <h2 class="section__title text-gradient" style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 16px; display: block;">Sit in on a real session before you decide.</h2>
+        <p class="section__subtitle dark-text" style="max-width: 400px; font-size: 1.05rem; line-height: 1.6; display: block;">No slides, no sales pitch — just your child, a small group, and a mentor watching over homework for one hour, on your own local clock.</p>
+        
+        <ul>
+          <li><span class="dash" style="color: var(--brand-blue-light); font-weight: bold;">✓</span> One free session, no card required</li>
+          <li><span class="dash" style="color: var(--brand-blue-light); font-weight: bold;">✓</span> Reply on WhatsApp within a few hours</li>
+          <li><span class="dash" style="color: var(--brand-blue-light); font-weight: bold;">✓</span> Pick a slot that fits your evening, wherever you are</li>
+        </ul>
+      </div>
+
+      <div class="trial-form-wrapper">
+        <form class="trial-form-grid">
+          <div class="form-field">
+            <label>Parent name</label>
+            <input type="text" placeholder="e.g. Anitha Menon">
+          </div>
+          <div class="form-field">
+            <label>WhatsApp number</label>
+            <input type="text" placeholder="e.g. +971 5X XXX XXXX">
+          </div>
+          <div class="form-field">
+            <label>Country</label>
+            <select>
+              <option>Select country</option>
+              <option>UAE</option>
+              <option>Oman</option>
+              <option>Saudi Arabia</option>
+              <option>Qatar</option>
+              <option>Kuwait</option>
+              <option>Bahrain</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Child's grade</label>
+            <select>
+              <option>Select grade</option>
+              <option>Grade 1-3</option>
+              <option>Grade 4-6</option>
+              <option>Grade 7-8</option>
+              <option>Grade 9-10</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>School name</label>
+            <input type="text" placeholder="e.g. Indian School Riyadh">
+          </div>
+          <div class="form-field">
+            <label>Subject needing most help</label>
+            <input type="text" placeholder="e.g. Maths, Science">
+          </div>
+          
+          <button type="submit" class="trial-submit glass-btn glass-btn-red">Book my free trial class</button>
+          <span class="trial-note">We'll confirm your slot over WhatsApp, on your local time — usually within a few hours.</span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="daycare-faq reveal-up">
+    <div class="container">
+      <div class="text-center grades-header reveal" style="max-width: 600px; margin: 0 auto;">
+        <span class="section__tag" style="display: block; margin-bottom: 8px;">FAQ</span>
+        <h2 class="section__title text-gradient" style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 16px; display: block;">Before you ask, a few answers</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <h5>Is Zeta Classes available in my country?</h5>
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-item">
+          <h5>What if my child's school uses a different textbook?</h5>
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-item">
+          <h5>Can my child leave early if homework is done?</h5>
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-item">
+          <h5>We're relocating to another Gulf country — does the plan move with us?</h5>
+          <span class="plus">+</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-lg-5">
+          <p class="footer__brand-desc">
+            ZETA INSTITUTE — Empowering students with quality education across all major boards (CBSE, IGCSE, IB, KB)
+            and
+            competitive examinations (NEET/JEE).
+          </p>
+          <p class="footer__brand-desc" style="font-size: 12px; margin-top: 8px;">
+            📍 ZETA INSTITUTE M13, Dar Al Safiya Building, Near NMC Hospital Abu Hail Metro Exit 3, Dubai, UAE.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook" id="social-fb">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram" id="social-ig">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube" id="social-yt">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter/X" id="social-x">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h4 class="footer__heading">Courses</h4>
+          <div class="footer__links">
+            <a href="#courses" class="footer__link">CBSE Tuitions</a>
+            <a href="#courses" class="footer__link">IGCSE Tuitions</a>
+            <a href="#courses" class="footer__link">IB Programme</a>
+            <a href="#courses" class="footer__link">Kerala Board</a>
+            <a href="#courses" class="footer__link">NEET/JEE Coaching</a>
+            <a href="#courses" class="footer__link">Revision Camp</a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h4 class="footer__heading">Company</h4>
+          <div class="footer__links">
+            <a href="#about" class="footer__link">About Us</a>
+            <a href="#why-us" class="footer__link">Why Choose Us</a>
+            <a href="#testimonials" class="footer__link">Testimonials</a>
+            <a href="#contact" class="footer__link">Contact</a>
+            <a href="#" class="footer__link">Careers</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-3">
+          <h4 class="footer__heading">Support</h4>
+          <div class="footer__links">
+            <a href="#" class="footer__link">Help Center</a>
+            <a href="#" class="footer__link">FAQs</a>
+            <a href="#" class="footer__link">Privacy Policy</a>
+            <a href="#" class="footer__link">Terms of Service</a>
+            <a href="#" class="footer__link">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2025 ZETA INSTITUTE Educational Services. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // JS Animation Engine
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-3d, .reveal-zoom, .reveal-up');
+    const observerReveal = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observerReveal.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => observerReveal.observe(el));
+
+    // Mobile Menu
+    const burger = document.getElementById('nav-burger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if(burger) {
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+        document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+      });
+    }
+
+    function closeMobile() {
+      if(burger) burger.classList.remove('open');
+      if(mobileMenu) mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Duration Selector Interactivity
+    function setDuration(hours, clickedEl) {
+      // Update active pill
+      const pills = document.querySelectorAll('#duration-pills .pill');
+      pills.forEach(pill => pill.classList.remove('active'));
+      clickedEl.classList.add('active');
+
+      // Update timeline fill width
+      const timelineFill = document.getElementById('timeline-fill');
+      if (hours === 1) timelineFill.style.width = '33.33%';
+      else if (hours === 2) timelineFill.style.width = '66.66%';
+      else if (hours === 3) timelineFill.style.width = '100%';
+    }
+
+    // Session Steps Scroll Animation
+    const sessionStepsContainer = document.querySelector('.session-steps');
+    const sessionSteps = document.querySelectorAll('.session-step');
+    
+    const stepsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          if (sessionStepsContainer) {
+             sessionStepsContainer.classList.add('active');
+          }
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
+    }, { threshold: 0.5, rootMargin: '-10% 0px -20% 0px' });
+
+    sessionSteps.forEach(step => stepsObserver.observe(step));
+  </script>
+</body>
+</html>
