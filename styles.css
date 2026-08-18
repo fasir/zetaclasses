@@ -3754,10 +3754,36 @@ a {
   padding: 20px 24px;
   margin-bottom: 16px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.faq-answer {
+  width: 100%;
+  margin-top: 16px;
+  display: none;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.faq-item.active {
+  border-color: rgba(37, 99, 235, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .plus {
+  transform: rotate(45deg);
+  background: var(--brand-blue-light);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
 }
 
 .faq-item:hover {
