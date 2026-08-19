@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Platform - ZETA CLASSES</title>
+  <meta name="theme-color" content="#0a0e27" />
+
+  <!-- Bootstrap 5 Grid System CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Custom enhancements for web platform page */
+    .wp-hero {
+      padding: 140px 0 80px;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .cursive-heading {
+      font-family: 'Caveat', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+    
+    .wp-badge {
+      color: var(--brand-blue-light);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+    
+    .wp-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 4vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1.5px;
+    }
+    
+    .wp-title-line1 {
+      color: #ffffff;
+      display: block;
+    }
+    
+    .wp-title-line2 {
+      background: linear-gradient(to right, var(--brand-blue-light), var(--brand-red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+    }
+    
+    .wp-price-card {
+      position: relative;
+      border-radius: 16px;
+      padding: 4px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 40px rgba(217,37,52,0.3);
+      transition: all 0.4s ease;
+      z-index: 1;
+    }
+    .wp-price-card::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 250%;
+      height: 250%;
+      background: conic-gradient(
+        var(--brand-red) 0deg,
+        var(--brand-red) 280deg,
+        var(--brand-blue-light) 340deg,
+        var(--brand-red) 360deg
+      );
+      animation: spin-border 3s linear infinite;
+      z-index: -1;
+    }
+    @keyframes spin-border {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    .wp-price-inner {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+      height: 100%;
+    }
+    .wp-price-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 50px rgba(217,37,52,0.4);
+    }
+    
+    .wp-price-header {
+      background: #0f172a;
+      color: var(--brand-blue-light);
+      text-align: center;
+      padding: 12px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    
+    .wp-price-body {
+      padding: 30px 20px;
+      text-align: center;
+      background: #ffffff;
+    }
+    
+    .wp-price-amount {
+      color: var(--brand-red);
+      font-size: 5.5rem;
+      font-weight: 900;
+      line-height: 1;
+      font-family: var(--font-display);
+    }
+    
+    .wp-price-footer {
+      background: #eff6ff;
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #0f172a;
+      border-top: 1px solid #dbeafe;
+    }
+    
+    /* Classes section */
+    .classes-section {
+      background: var(--bg-primary);
+      color: #fff;
+      padding: 100px 0;
+      border-radius: 40px 40px 0 0;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .class-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+    
+    .class-tab {
+      padding: 12px 24px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      color: #e2e8f0;
+      font-weight: 700;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .class-tab:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      border-color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+    }
+    .class-tab.active {
+      background: var(--brand-red);
+      color: #fff;
+      transform: translateY(-2px);
+      border-color: var(--brand-red);
+      box-shadow: 0 10px 20px rgba(217,37,52,0.3);
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+    
+    .wp-feature-card {
+      background: rgba(255,255,255,0.02);
+      padding: 40px 24px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+    .wp-feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand-blue-light), var(--brand-red));
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.4s ease;
+    }
+    .wp-feature-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+      border-color: rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.04);
+    }
+    .wp-feature-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .wp-feature-icon {
+      width: 75px;
+      height: 75px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      color: var(--brand-blue-light);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    .wp-feature-card:hover .wp-feature-icon {
+      background: var(--brand-blue-light);
+      color: #fff;
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Subjects section */
+    .subjects-section {
+      padding: 70px 0;
+      position: relative;
+      z-index: 2;
+      background: var(--bg-primary);
+    }
+    .subjects-section-header {
+      margin-bottom: 60px;
+    }
+    .subjects-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      backdrop-filter: blur(10px);
+      letter-spacing: 1px;
+    }
+    .subjects-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand-red);
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 18px;
+    }
+    .subject-pill {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 20px;
+      padding: 24px 20px;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      text-align: center;
+    }
+    .subject-pill::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--brand-blue-light), var(--brand-red));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+    .subject-pill:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .subject-pill:hover::after {
+      transform: scaleX(1);
+    }
+    .subject-pill.lang:hover { box-shadow: 0 20px 40px rgba(59,130,246,0.15); }
+    .subject-pill.skill:hover { box-shadow: 0 20px 40px rgba(16,185,129,0.15); }
+    .subject-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px auto;
+      font-size: 1.3rem;
+    }
+    .subject-pill .subject-icon-wrap { background: rgba(217,37,52,0.12); }
+    .subject-pill.lang .subject-icon-wrap { background: rgba(59,130,246,0.12); }
+    .subject-pill.skill .subject-icon-wrap { background: rgba(16,185,129,0.12); }
+    .subject-type {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      display: inline-block;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .subject-pill .subject-type {
+      color: var(--brand-blue-light);
+      background: rgba(59,130,246,0.1);
+    }
+    .subject-pill.lang .subject-type {
+      color: var(--brand-blue-light);
+      background: rgba(59,130,246,0.1);
+    }
+    .subject-pill.skill .subject-type {
+      color: var(--brand-blue-light);
+      background: rgba(59,130,246,0.1);
+    }
+    .subject-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      font-family: var(--font-display);
+      margin-top: 8px;
+      display: block;
+      line-height: 1.3;
+    }
+    
+    /* Buttons */
+    .wp-btn-primary {
+      background: #5e1622;
+      color: white;
+      padding: 11px 40px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 4px 15px rgba(0,0,0,0.2);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+    .wp-btn-primary:hover {
+      background: #761a29;
+      transform: translateY(-2px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .wp-btn-outline {
+      background: #0f172a;
+      color: white;
+      padding: 11px 40px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+    .wp-btn-outline:hover {
+      background: #1e293b;
+      border-color: rgba(255,255,255,0.3);
+    }
+    
+    /* ─── Enhanced Why Choose Section ─── */
+    .why-choose-section {
+      padding: 120px 0 100px;
+      background: radial-gradient(circle at 50% 10%, rgba(37, 99, 235, 0.08) 0%, rgba(6, 11, 28, 0.98) 60%, var(--bg-primary) 100%);
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+    }
+    
+    .why-choose-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), rgba(217, 37, 52, 0.5), transparent);
+    }
+
+    .why-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(217, 37, 52, 0.08);
+      border: 1px solid rgba(217, 37, 52, 0.25);
+      padding: 8px 22px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #ff6b7a;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 15px rgba(217, 37, 52, 0.1);
+    }
+
+    .why-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand-red);
+      box-shadow: 0 0 10px var(--brand-red);
+      animation: pulse-dot 2s infinite;
+    }
+
+    .why-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 2.8vw, 2.85rem);
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 16px;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+    }
+
+    .why-title .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .why-title .gradient-text-red {
+      background: linear-gradient(135deg, #f87171 0%, #d92534 50%, #fb7185 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .why-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.08rem;
+      max-width: 700px;
+      margin: 0 0 50px 0;
+      line-height: 1.75;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+
+    .why-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 22px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .why-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--brand-blue-light), var(--brand-red));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(59, 130, 246, 0.35);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(59, 130, 246, 0.12);
+    }
+
+    .why-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .why-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .why-card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      transition: all 0.35s ease;
+    }
+
+    .why-card-icon.blue {
+      background: rgba(37, 99, 235, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      color: #60a5fa;
+    }
+
+    .why-card-icon.red {
+      background: rgba(217, 37, 52, 0.12);
+      border: 1px solid rgba(217, 37, 52, 0.25);
+      color: #f87171;
+    }
+
+    .why-card-icon.emerald {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #34d399;
+    }
+
+    .why-card-icon.amber {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: #fbbf24;
+    }
+
+    .why-card-icon.purple {
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      color: #a78bfa;
+    }
+
+    .why-card-icon.cyan {
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      color: #22d3ee;
+    }
+
+    .why-card:hover .why-card-icon {
+      transform: scale(1.1) rotate(4deg);
+    }
+
+    .why-card-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+    }
+
+    .why-card-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .why-card-desc {
+      color: #94a3b8;
+      font-size: 0.96rem;
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .why-card-check {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #38bdf8;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .why-card-check svg {
+      flex-shrink: 0;
+    }
+
+    .why-cta-banner {
+      background: linear-gradient(135deg, rgba(22, 66, 140, 0.2) 0%, rgba(217, 37, 52, 0.12) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 36px 40px;
+      margin-top: 20px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 991px) {
+      .wp-hero {
+        padding: 110px 0 30px;
+        min-height: auto;
+      }
+      .wp-hero-desc {
+        margin-bottom: 1rem !important;
+      }
+      .wp-hero .row {
+        --bs-gutter-y: 1.25rem;
+      }
+      .wp-choose-section {
+        padding: 80px 0 70px;
+      }
+      .why-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      .why-card {
+        padding: 26px 22px;
+      }
+      .why-cta-banner {
+        padding: 28px 24px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .wp-hero {
+        padding: 95px 0 25px;
+      }
+      .wp-hero-desc {
+        margin-bottom: 0.75rem !important;
+      }
+      .wp-hero .row {
+        --bs-gutter-y: 1rem;
+      }
+      .why-choose-section {
+        padding: 60px 0 50px;
+      }
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .why-card {
+        padding: 22px 18px;
+        border-radius: 18px;
+      }
+      .why-card-icon {
+        width: 46px;
+        height: 46px;
+      }
+      .why-cta-banner {
+        padding: 22px 18px;
+        border-radius: 18px;
+      }
+      .why-cta-banner .cta-btn-group {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 10px !important;
+        width: 100%;
+      }
+      .why-cta-banner .wp-btn-primary,
+      .why-cta-banner .wp-btn-outline {
+        padding: 10px 14px !important;
+        font-size: 0.88rem !important;
+        flex: 1 1 50% !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        justify-content: center;
+      }
+      .wp-hero .hero-mobile-btns {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 10px !important;
+        width: 100%;
+      }
+      .wp-hero .hero-mobile-btns .wp-btn-primary,
+      .wp-hero .hero-mobile-btns .wp-btn-outline {
+        padding: 10px 16px !important;
+        font-size: 0.9rem !important;
+        flex: 1 1 50% !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .subjects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      .subject-pill {
+        padding: 18px 12px;
+        border-radius: 16px;
+      }
+      .subject-icon-wrap {
+        width: 38px;
+        height: 38px;
+        font-size: 1.15rem;
+        margin: 0 auto 10px auto;
+      }
+      .subject-type {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+        letter-spacing: 1px;
+      }
+      .subject-title {
+        font-size: 0.95rem;
+        margin-top: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header from index.html -->
+  <header class="header" id="header">
+    <nav class="container nav">
+      <a href="index.html" class="nav__brand">
+        <img src="images/logo.png" alt="ZETA CLASSES Logo" class="nav__logo" />
+      </a>
+      <div class="nav__links" id="nav-links">
+        <a href="index.html#home" class="nav__link">HOME</a>
+        <a href="index.html#courses" class="nav__link">COURSES</a>
+        <a href="index.html#about" class="nav__link">ABOUT US</a>
+        <a href="index.html#contact" class="nav__link">CONTACT</a>
+      </div>
+      <div class="nav__actions" style="display: flex; gap: 10px;">
+        <a href="index.html#login" class="nav__cta" style="background: var(--brand-blue-light); color: white; padding: 12px 36px;">User Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow--1"></div>
+  <div class="bg-glow bg-glow--3"></div>
+
+  <!-- Hero Section -->
+  <section class="wp-hero">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-12 col-lg-7">
+          <div class="cursive-heading">
+            <span style="color: var(--brand-blue-light);">Learn Today,</span> 
+            <span style="color: var(--brand-red);">Lead Tomorrow!</span>
+          </div><br>
+          <div class="wp-badge">SMART LEARNING PLATFORM FOR CBSE STUDENTS • NURSERY TO GRADE 12</div>
+          <h1 class="wp-title">
+            <span class="wp-title-line1">One Home.</span>
+            <span class="wp-title-line2">One Plan.</span>
+          </h1>
+          <p style="font-size: 1.25rem; margin-bottom: 1.2rem; color: #e2e8f0; font-weight: 500;">Perfect for families with children in different grades.</p>
+          <p class="wp-hero-desc" style="font-size: 1.05rem; color: #94a3b8; line-height: 1.8; margin-bottom: 2.5rem; max-width: 95%;">
+            Not a replacement for tuition. Animated NCERT-based video lessons, practice questions, mock exams and parent insight reports — all in one family plan, plus test prep that covers everything from CBSE Class 1 to civil services.
+          </p>
+          <!-- Desktop Buttons -->
+          <div class="d-none d-lg-flex flex-wrap gap-3">
+            <button class="wp-btn-primary">View plan</button>
+            <button class="wp-btn-outline">Start learning</button>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="wp-price-card">
+            <div class="wp-price-inner">
+              <div class="wp-price-header">A SMART WAY TO STUDY INDEPENDENTLY AT HOME</div>
+              <div class="wp-price-body">
+                <div class="wp-price-amount">149</div>
+                <div style="color: #64748b; font-size: 1rem; font-weight: 600; margin-top: 5px;">per year</div>
+              </div>
+              <div class="wp-price-footer">
+                For students Nursery to Grade 12 • CBSE curriculum
+              </div>
+            </div>
+          </div>
+          <!-- Mobile Buttons (Positioned below the price card on mobile) -->
+          <div class="d-flex d-lg-none flex-nowrap hero-mobile-btns gap-2 gap-sm-3 mt-3 mt-sm-4 justify-content-center">
+            <button class="wp-btn-primary">View plan</button>
+            <button class="wp-btn-outline">Start learning</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes Section -->
+  <section class="classes-section">
+    <div class="container">
+      <p style="font-family: monospace; color: #94a3b8; margin-bottom: 15px; font-size: 14px;">Set a child's class - content below updates instantly</p>
+      
+      <div class="class-tabs">
+        <button class="class-tab active">Nursery</button>
+        <button class="class-tab">LKG</button>
+        <button class="class-tab">UKG</button>
+        <button class="class-tab">1st</button>
+        <button class="class-tab">2nd</button>
+        <button class="class-tab">3rd</button>
+        <button class="class-tab">4th</button>
+        <button class="class-tab">5th</button>
+        <button class="class-tab">6th</button>
+        <button class="class-tab">7th</button>
+        <button class="class-tab">8th</button>
+        <button class="class-tab">9th</button>
+        <button class="class-tab">10th</button>
+        <button class="class-tab">11th</button>
+        <button class="class-tab">12th</button>
+      </div>
+      
+      <p style="font-weight: 700; color: #fff; margin-bottom: 45px; font-size: 1.1rem;">Showing content for <span id="active-class-text" style="color: var(--brand-red);">Nursery</span></p>
+      
+      <div style="background: var(--brand-blue-light); color: white; display: inline-block; padding: 12px 28px; border-radius: 999px; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1.5px; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);">
+        COMPLETE LEARNING SUPPORT AT YOUR FINGERTIPS
+      </div>
+      
+      <div class="feature-grid">
+        <div class="wp-feature-card">
+          <div class="wp-feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
+          </div>
+          <h4 style="font-weight: 800; font-size: 1.15rem; margin-bottom: 12px; color: #fff;">Animated AI video classes</h4>
+          <p style="color: #94a3b8; font-size: 0.95rem; margin: 0; line-height: 1.5;">Concepts explained in an engaging way</p>
+        </div>
+        
+        <div class="wp-feature-card">
+          <div class="wp-feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h4 style="font-weight: 800; font-size: 1.15rem; margin-bottom: 12px; color: #fff;">Practice questions</h4>
+          <p style="color: #94a3b8; font-size: 0.95rem; margin: 0; line-height: 1.5;">Strengthen your understanding</p>
+        </div>
+        
+        <div class="wp-feature-card">
+          <div class="wp-feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <h4 style="font-weight: 800; font-size: 1.15rem; margin-bottom: 12px; color: #fff;">Digital notes</h4>
+          <p style="color: #94a3b8; font-size: 0.95rem; margin: 0; line-height: 1.5;">Quick revision, anytime anywhere</p>
+        </div>
+        
+        <div class="wp-feature-card">
+          <div class="wp-feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h4 style="font-weight: 800; font-size: 1.15rem; margin-bottom: 12px; color: #fff;">Mock exams</h4>
+          <p style="color: #94a3b8; font-size: 0.95rem; margin: 0; line-height: 1.5;">Exam ready, with confidence</p>
+        </div>
+        
+        <div class="wp-feature-card">
+          <div class="wp-feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h4 style="font-weight: 800; font-size: 1.15rem; margin-bottom: 12px; color: #fff;">Parent insights</h4>
+          <p style="color: #94a3b8; font-size: 0.95rem; margin: 0; line-height: 1.5;">Track progress and concept clarity</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subjects Section -->
+  <section class="subjects-section">
+    <div class="container">
+      <div class="subjects-section-header">
+        <div class="subjects-badge">
+          <span class="dot"></span>
+          <span style="color:#e2e8f0;">Nursery – 12 &nbsp;•&nbsp; NCERT Mapped</span>
+        </div>
+
+        <h2 style="font-family: var(--font-display); font-size: clamp(1.6rem, 2.8vw, 2.6rem); font-weight: 900; line-height: 1.15; margin-bottom: 18px; letter-spacing: -0.5px;">
+          One subscription, <span style="background: linear-gradient(to right, var(--brand-blue-light), var(--brand-red)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">every NCERT subject</span><br>covered for your family
+        </h2>
+
+        <p style="color: #94a3b8; font-size: 1.1rem; max-width: 650px; line-height: 1.8;">
+          Animated lessons, practice with instant feedback, and revision notes — mapped chapter-by-chapter to the NCERT textbook your child uses in school.
+        </p>
+      </div>
+
+      <div class="subjects-grid">
+        <div class="subject-pill">
+          <div class="subject-icon-wrap">📐</div>
+          <span class="subject-type">CORE</span>
+          <span class="subject-title">Math</span>
+        </div>
+        <div class="subject-pill">
+          <div class="subject-icon-wrap">🔬</div>
+          <span class="subject-type">CORE</span>
+          <span class="subject-title">Science</span>
+        </div>
+        <div class="subject-pill">
+          <div class="subject-icon-wrap">📜</div>
+          <span class="subject-type">CORE</span>
+          <span class="subject-title">History</span>
+        </div>
+        <div class="subject-pill">
+          <div class="subject-icon-wrap">🌍</div>
+          <span class="subject-type">CORE</span>
+          <span class="subject-title">Geography</span>
+        </div>
+        <div class="subject-pill">
+          <div class="subject-icon-wrap">🏛️</div>
+          <span class="subject-type">CORE</span>
+          <span class="subject-title">Political Science</span>
+        </div>
+        <div class="subject-pill">
+          <div class="subject-icon-wrap">📈</div>
+          <span class="subject-type">CORE</span>
+          <span class="subject-title">Economics</span>
+        </div>
+        <div class="subject-pill lang">
+          <div class="subject-icon-wrap">📖</div>
+          <span class="subject-type">LANG</span>
+          <span class="subject-title">English Literature</span>
+        </div>
+        <div class="subject-pill lang">
+          <div class="subject-icon-wrap">✍️</div>
+          <span class="subject-type">LANG</span>
+          <span class="subject-title">English Grammar</span>
+        </div>
+        <div class="subject-pill lang">
+          <div class="subject-icon-wrap">📚</div>
+          <span class="subject-type">LANG</span>
+          <span class="subject-title">हिन्दी साहित्य</span>
+        </div>
+        <div class="subject-pill lang">
+          <div class="subject-icon-wrap">🖊️</div>
+          <span class="subject-type">LANG</span>
+          <span class="subject-title">हिन्दी व्याकरण</span>
+        </div>
+        <div class="subject-pill lang">
+          <div class="subject-icon-wrap">🕉️</div>
+          <span class="subject-type">LANG</span>
+          <span class="subject-title">संस्कृत</span>
+        </div>
+        <div class="subject-pill skill">
+          <div class="subject-icon-wrap">🌱</div>
+          <span class="subject-type">SKILL</span>
+          <span class="subject-title">Climate Leadership</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Test Prep Section -->
+  <section class="test-prep-section" style="padding: 120px 0; background: var(--bg-secondary); position: relative; z-index: 2; border-top: 1px solid rgba(255,255,255,0.05);">
+    <style>
+      .exam-card {
+        background: rgba(255,255,255,0.03);
+        border-radius: 16px;
+        padding: 20px 24px;
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        border: 1px solid rgba(255,255,255,0.07);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(8px);
+      }
+      .exam-card::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background: linear-gradient(to bottom, var(--brand-blue-light), var(--brand-red));
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.35s ease;
+      }
+      .exam-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 20px rgba(59,130,246,0.1);
+        border-color: rgba(59,130,246,0.3);
+        background: rgba(255,255,255,0.05);
+      }
+      .exam-card:hover::before {
+        transform: scaleY(1);
+      }
+      .exam-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+      .exam-cat-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--brand-blue-light);
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding: 6px 14px;
+        background: rgba(59,130,246,0.08);
+        border-radius: 999px;
+        border: 1px solid rgba(59,130,246,0.2);
+      }
+      .info-box {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 24px;
+        padding: 40px;
+        margin-top: 30px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .info-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--brand-blue-light), var(--brand-red));
+      }
+      .info-box:hover {
+        background: rgba(255,255,255,0.04);
+        border-color: rgba(255,255,255,0.15);
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      }
+    </style>
+    <div class="container">
+      <div style="display: inline-flex; align-items: center; gap: 8px; color: var(--brand-blue-light); font-size: 0.82rem; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px; padding: 6px 16px; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2); border-radius: 999px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--brand-blue-light);display:inline-block;"></span>
+        FOR STUDENTS AND WORKING ADULTS ALIKE
+      </div>
+      <h2 style="font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 900; color: #fff; margin-bottom: 18px; letter-spacing: -0.5px; line-height: 1.15;">
+        Test prep that <span style="background: linear-gradient(to right, var(--brand-blue-light), var(--brand-red)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">doesn't stop</span><br>at school
+      </h2>
+      <p style="color: #94a3b8; font-size: 1.05rem; max-width: 700px; margin-bottom: 50px; line-height: 1.8;">
+        A Nursery student and a working professional preparing for civil services can both find their exam here — real, named exams under every category, not just labels.
+      </p>
+
+      <!-- Category 1 -->
+      <div class="exam-cat-label">🏫 School Level – All India</div>
+      <div class="exam-grid">
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">Jawahar Navodaya</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">KVPY</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">SOF – NSO</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">NTA PM Yasasvi</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">NTSE</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">IEO</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">IMO (SOF)</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">NCO (Cyber Olympiad)</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">MTSE</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">Sainik School Entrance</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">Rashtriya Military School</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">Homi Bhabha Balvidnyanik</span>
+        </div>
+      </div>
+      
+      <!-- Category 2 -->
+      <div class="exam-cat-label">⚙️ Engineering Entrance</div>
+      <div class="exam-grid">
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">BITSAT</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">JEE B.Arch</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">JEE Main / Advanced</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">VIT Engineering</span>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="exam-cat-label">🏥 Medical</div>
+      <div class="exam-grid">
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">NEET UG</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">AIIMS Staff Nurse</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">PGIMER B.Sc Nursing</span>
+        </div>
+        <div class="exam-card">
+          <span style="color: var(--brand-blue-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">EXAM</span>
+          <span style="color: #fff; font-weight: 800; font-size: 1.05rem; line-height: 1.3;">UP B.Sc Nursing</span>
+        </div>
+      </div>
+
+
+      <!-- Info Box -->
+      <div class="info-box">
+        <h4 style="color: var(--brand-blue-light); font-weight: 800; font-size: 1.2rem; margin-bottom: 25px; font-family: var(--font-display);">Plus 20+ more categories, all with named exams inside</h4>
+        
+        <div style="margin-bottom: 18px; line-height: 1.6; font-size: 1.05rem;">
+          <strong style="color: #fff; margin-right: 5px;">Government and PSU</strong> <span style="color: #94a3b8;">— Civil Services, Defence & Police, Banking, Insurance, Railway, SSC, Government Exams, PSUs & Research</span>
+        </div>
+        <div style="margin-bottom: 18px; line-height: 1.6; font-size: 1.05rem;">
+          <strong style="color: #fff; margin-right: 5px;">Higher ed entrance</strong> <span style="color: #94a3b8;">— Graduate Engineering, Management, Law/Arts/Commerce, Foreign Education, CUET</span>
+        </div>
+        <div style="line-height: 1.6; font-size: 1.05rem;">
+          <strong style="color: #fff; margin-right: 5px;">Professional and skill</strong> <span style="color: #94a3b8;">— Computer & IT, Designing, Driving License, Finance, IT Placement Papers, Certification & Professional Courses, Teaching</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="why-choose-section" id="why-choose">
+    <div class="container">
+      <div class="why-header text-start">
+        <div class="why-badge">
+          <span class="why-badge-dot"></span>
+          <span>WHY CHOOSE ZETA CLASSES</span>
+        </div>
+        <h2 class="why-title">
+          Built on the <span class="gradient-text">CBSE Syllabus</span>,<br>
+          Designed for <span class="gradient-text-red">Self-Learning</span>
+        </h2>
+        <p class="why-subtitle">
+          A comprehensive, self-paced learning ecosystem that empowers students from Nursery to Grade 12 to grasp concepts, revise chapters, and excel in exams independently.
+        </p>
+      </div>
+
+      <!-- Feature Cards Grid (6 Interactive Highlights) -->
+      <div class="why-grid">
+        <!-- 1. Based on NCERT Concepts -->
+        <div class="why-card">
+          <div class="why-card-top">
+            <div class="why-card-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <span class="why-card-tag">100% NCERT</span>
+          </div>
+          <h3 class="why-card-title">Based on NCERT Concepts</h3>
+          <p class="why-card-desc">
+            Directly mapped chapter-by-chapter to the official CBSE NCERT textbook curriculum, ensuring seamless classroom and exam alignment.
+          </p>
+          <div class="why-card-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Exact Textbook Alignment</span>
+          </div>
+        </div>
+
+        <!-- 2. Animated AI Video Classes -->
+        <div class="why-card">
+          <div class="why-card-top">
+            <div class="why-card-icon red">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+            <span class="why-card-tag">AI Powered</span>
+          </div>
+          <h3 class="why-card-title">Animated AI Video Classes</h3>
+          <p class="why-card-desc">
+            Complex concepts broken down into bite-sized, high-retention visual animations that make self-studying intuitive, engaging, and enjoyable.
+          </p>
+          <div class="why-card-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>High Retention Visuals</span>
+          </div>
+        </div>
+
+        <!-- 3. Helps in self-learning, revision & concept clarity -->
+        <div class="why-card">
+          <div class="why-card-top">
+            <div class="why-card-icon emerald">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="9" y1="18" x2="15" y2="18"></line>
+                <line x1="10" y1="22" x2="14" y2="22"></line>
+                <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
+              </svg>
+            </div>
+            <span class="why-card-tag">Concept Clarity</span>
+          </div>
+          <h3 class="why-card-title">Self-Learning & Revision</h3>
+          <p class="why-card-desc">
+            Helps in self-learning, quick revision, and deep concept clarity — enabling students to master challenging subjects at their own rhythm.
+          </p>
+          <div class="why-card-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Self-Paced Understanding</span>
+          </div>
+        </div>
+
+        <!-- 4. For Nursery to Grade 12, CBSE curriculum -->
+        <div class="why-card">
+          <div class="why-card-top">
+            <div class="why-card-icon amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <span class="why-card-tag">Nursery – 12th</span>
+          </div>
+          <h3 class="why-card-title">Nursery to Grade 12 CBSE</h3>
+          <p class="why-card-desc">
+            Comprehensive curriculum coverage designed for Nursery to Grade 12 students. One subscription caters to the whole family's school journey.
+          </p>
+          <div class="why-card-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>All Grades In One Plan</span>
+          </div>
+        </div>
+
+        <!-- 5. Practice questions, mock exams & digital notes -->
+        <div class="why-card">
+          <div class="why-card-top">
+            <div class="why-card-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <span class="why-card-tag">Exam Ready</span>
+          </div>
+          <h3 class="why-card-title">Practice, Mocks & Notes</h3>
+          <p class="why-card-desc">
+            Equipped with chapter practice questions, timed mock exams with instant scoring, and concise digital revision notes anytime, anywhere.
+          </p>
+          <div class="why-card-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Complete Exam Toolkit</span>
+          </div>
+        </div>
+
+        <!-- 6. Parents can monitor progress and understanding -->
+        <div class="why-card">
+          <div class="why-card-top">
+            <div class="why-card-icon cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <span class="why-card-tag">Parent Insights</span>
+          </div>
+          <h3 class="why-card-title">Parent Progress Tracking</h3>
+          <p class="why-card-desc">
+            Parents can easily monitor study progress, track accuracy rates, and pinpoint conceptual understanding with real-time reports and analytics.
+          </p>
+          <div class="why-card-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Real-time Parent Dashboard</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Reassurance Banner -->
+      <div class="why-cta-banner">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-8">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <span style="font-size: 1.6rem;">✨</span>
+              <h4 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: #fff; margin: 0;">
+                All Nursery to Grade 12 Classes in One Single Plan
+              </h4>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.98rem; margin: 0; line-height: 1.6;">
+              Give your child the confidence of independent learning for only <strong style="color: #fff;">₹149/year</strong>. Available 24/7 on mobile, tablet, and desktop.
+            </p>
+          </div>
+          <div class="col-12 col-lg-4 text-lg-end">
+            <div class="d-flex flex-nowrap cta-btn-group gap-2 gap-sm-3 justify-content-center justify-content-lg-end">
+              <a href="#active-class-text" class="wp-btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap;">View Classes</a>
+              <a href="index.html" class="wp-btn-outline" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap;">Back to Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-lg-5">
+          <p class="footer__brand-desc">
+            ZETA INSTITUTE — Empowering students with quality education across all major boards (CBSE, IGCSE, IB, KB)
+            and competitive examinations (NEET/JEE).
+          </p>
+          <p class="footer__brand-desc" style="font-size: 12px; margin-top: 8px;">
+            📍 ZETA INSTITUTE M13, Dar Al Safiya Building, Near NMC Hospital Abu Hail Metro Exit 3, Dubai, UAE.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook" id="social-fb">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram" id="social-ig">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube" id="social-yt">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter/X" id="social-x">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h4 class="footer__heading">Courses</h4>
+          <div class="footer__links">
+            <a href="index.html#courses" class="footer__link">CBSE Tuitions</a>
+            <a href="index.html#courses" class="footer__link">IGCSE Tuitions</a>
+            <a href="index.html#courses" class="footer__link">IB Programme</a>
+            <a href="index.html#courses" class="footer__link">Kerala Board</a>
+            <a href="index.html#courses" class="footer__link">NEET/JEE Coaching</a>
+            <a href="index.html#courses" class="footer__link">Revision Camp</a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h4 class="footer__heading">Company</h4>
+          <div class="footer__links">
+            <a href="index.html#about" class="footer__link">About Us</a>
+            <a href="index.html#why-us" class="footer__link">Why Choose Us</a>
+            <a href="index.html#testimonials" class="footer__link">Testimonials</a>
+            <a href="index.html#contact" class="footer__link">Contact</a>
+            <a href="#" class="footer__link">Careers</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-3">
+          <h4 class="footer__heading">Support</h4>
+          <div class="footer__links">
+            <a href="#" class="footer__link">Help Center</a>
+            <a href="#" class="footer__link">FAQs</a>
+            <a href="#" class="footer__link">Privacy Policy</a>
+            <a href="#" class="footer__link">Terms of Service</a>
+            <a href="#" class="footer__link">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2025 ZETA INSTITUTE Educational Services. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/971582303004" class="whatsapp-float" target="_blank" rel="noopener"
+    aria-label="Chat on WhatsApp" id="whatsapp-float">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.class-tab');
+      const activeTextSpan = document.getElementById('active-class-text');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Remove active class from all tabs
+          tabs.forEach(t => t.classList.remove('active'));
+          // Add active class to clicked tab
+          tab.classList.add('active');
+          // Update the text to show the active class
+          if (activeTextSpan) {
+            activeTextSpan.textContent = tab.textContent;
+          }
+        });
+      });
+    });
+  </script>
+</body>
