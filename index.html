@@ -50,23 +50,25 @@
 
   <!-- ═══ HEADER ═══ -->
   <header class="header" id="header">
-    <nav class="container nav">
-      <a href="#" class="nav__brand" id="nav-brand">
+    <nav class="container nav" style="max-width: 1150px; margin: 0 auto;">
+      <a href="#" class="nav__brand" id="nav-brand" style="margin-left: 40px;">
         <img src="images/logo.png" alt="ZETA CLASSES Logo" class="nav__logo" />
       </a>
 
-      <div class="nav__links" id="nav-links">
+      <div class="nav__links" id="nav-links" style="align-items: center; display: flex;">
         <a href="#home" class="nav__link active">HOME</a>
         <a href="web-platform.html" class="nav__link">WEB PLATFORM</a>
         <a href="daycare.html" class="nav__link">DAYCARE</a>
-        <a href="#courses" class="nav__link">COURSES</a>
-        <a href="#about" class="nav__link">ABOUT US</a>
         <a href="#contact" class="nav__link">CONTACT</a>
       </div>
 
-      <div class="nav__actions" style="display: flex;">
+      <div class="nav__actions" style="display: flex; gap: 10px; align-items: center; margin-right: 20px;">
+        <a href="#enroll" class="nav__cta"
+          style="background: var(--brand-blue-light); color: white; padding: 6px 14px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px;">
+          Book a Free Demo Class
+        </a>
         <a href="#login" class="nav__cta"
-          style="background: var(--brand-blue-light); color: white; padding: 12px 36px;">
+          style="background: var(--brand-blue-light); color: white; padding: 6px 18px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px;">
           User Login
         </a>
       </div>
@@ -81,9 +83,7 @@
       <a href="#home" onclick="closeMobile()">🏠 Home</a>
       <a href="web-platform.html" onclick="closeMobile()">💻 Web Platform</a>
       <a href="daycare.html" onclick="closeMobile()">🧸 Daycare</a>
-      <a href="#courses" onclick="closeMobile()">📚 Courses</a>
       <a href="#why-us" onclick="closeMobile()">⭐ Why Us</a>
-      <a href="#about" onclick="closeMobile()">🏫 About</a>
       <a href="#testimonials" onclick="closeMobile()">💬 Reviews</a>
       <a href="#contact" onclick="closeMobile()">📞 Contact</a>
     </div>
@@ -172,7 +172,7 @@
       </div>
 
       <!-- SKILL MAP DESCRIPTION -->
-      <div class="row mt-3 reveal-up">
+      <div class="row mt-4 mb-5 reveal-up">
         <div class="col-12">
           <div
             class="skill-map-banner mx-auto d-flex flex-column flex-md-row align-items-center justify-content-between"
@@ -191,22 +191,7 @@
         </div>
       </div>
 
-      <!-- HERO ACTIONS -->
-      <div class="row mt-4">
-        <div class="col-12 text-start">
-          <div class="hero__actions justify-content-start reveal-up">
-            <a href="#enroll" class="btn btn--primary" id="hero-cta"
-              style="font-size: 1.2rem; padding: 0.8rem 2.5rem; border-radius: 8px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <polygon points="10 8 16 12 10 16 10 8" />
-              </svg>
-              Register Now
-            </a>
-          </div>
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -1154,12 +1139,12 @@
               📍 ZETA INSTITUTE M13, Dar Al Safiya Building, Near NMC Hospital Abu Hail Metro Exit 3, Dubai, UAE.
             </p>
             <div class="footer__social">
-              <a href="#" aria-label="Facebook" id="social-fb">
+              <a href="https://www.facebook.com/ZetaUAE/" target="_blank" aria-label="Facebook" id="social-fb">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
               </a>
-              <a href="#" aria-label="Instagram" id="social-ig">
+              <a href="https://www.instagram.com/zeta_uae" target="_blank" aria-label="Instagram" id="social-ig">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                   stroke-linecap="round" stroke-linejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -1167,13 +1152,13 @@
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                 </svg>
               </a>
-              <a href="#" aria-label="YouTube" id="social-yt">
+              <a href="https://www.youtube.com/@zetaclasses9568" target="_blank" aria-label="YouTube" id="social-yt">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
               </a>
-              <a href="#" aria-label="Twitter/X" id="social-x">
+              <a href="https://x.com/ZetaClasses" target="_blank" aria-label="Twitter/X" id="social-x">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
