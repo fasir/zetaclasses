@@ -71,10 +71,17 @@
       box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 40px rgba(217,37,52,0.3);
       transition: all 0.4s ease;
       z-index: 1;
-      margin-top: -155px;
+      margin-top: 20px;
       max-width: 530px;
       width: 100%;
       margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 992px) {
+      .wp-price-card {
+        margin-top: -155px;
+        margin-right: 0;
+      }
     }
     .wp-price-card::before {
       content: '';
@@ -152,6 +159,12 @@
       border-radius: 40px 40px 0 0;
       position: relative;
       z-index: 2;
+      margin-top: 30px;
+    }
+    @media (min-width: 992px) {
+      .classes-section {
+        margin-top: -100px;
+      }
     }
     
     .class-tabs {
@@ -847,7 +860,7 @@
   </section>
 
   <!-- Classes Section -->
-  <section class="classes-section" style="margin-top: -100px;">
+  <section class="classes-section">
     <div class="container">
       <p style="font-family: monospace; color: #94a3b8; margin-bottom: 15px; font-size: 14px;">Set a child's class - content below updates instantly</p>
       
