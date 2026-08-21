@@ -235,7 +235,8 @@ button {
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 22px;
+  margin: 0 auto;
 }
 
 .nav__link {
@@ -752,6 +753,12 @@ button {
   background-clip: text;
 }
 
+.section__title .text-gradient {
+  font-family: serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
 .section__subtitle {
   font-size: 17px;
   color: var(--text-secondary);
@@ -1128,7 +1135,7 @@ button {
   background: var(--surface);
   border: 1px solid var(--stroke);
   border-radius: var(--radius-lg);
-  padding: var(--space-xl) var(--space-lg);
+  padding: 24px var(--space-lg);
   text-align: center;
   transition: var(--transition-slow);
 }
@@ -1142,7 +1149,7 @@ button {
 .feature-card__icon {
   width: 64px;
   height: 64px;
-  margin: 0 auto var(--space-lg);
+  margin: 0 auto 16px;
   border-radius: var(--radius-md);
   display: grid;
   place-items: center;
@@ -1162,8 +1169,29 @@ button {
   font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.7;
-  text-align: center;
-  text-wrap: balance;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    text-align: left;
+    padding: var(--space-md) var(--space-lg);
+  }
+  .feature-card__icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 16px;
+  }
+  .feature-card__desc {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
 }
 
 /* ─── ABOUT / CTA SPLIT ─── */

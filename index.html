@@ -57,18 +57,17 @@
 
       <div class="nav__links" id="nav-links">
         <a href="#home" class="nav__link active">HOME</a>
+        <a href="web-platform.html" class="nav__link">WEB PLATFORM</a>
+        <a href="daycare.html" class="nav__link">DAYCARE</a>
         <a href="#courses" class="nav__link">COURSES</a>
         <a href="#about" class="nav__link">ABOUT US</a>
         <a href="#contact" class="nav__link">CONTACT</a>
       </div>
 
-      <div class="nav__actions" style="display: flex; gap: 10px;">
+      <div class="nav__actions" style="display: flex;">
         <a href="#login" class="nav__cta"
           style="background: var(--brand-blue-light); color: white; padding: 12px 36px;">
           User Login
-        </a>
-        <a href="#enroll" class="nav__cta" style="background: var(--brand-red); color: white; padding: 12px 36px;">
-          Register Now
         </a>
       </div>
 
@@ -80,12 +79,13 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
       <a href="#home" onclick="closeMobile()">🏠 Home</a>
+      <a href="web-platform.html" onclick="closeMobile()">💻 Web Platform</a>
+      <a href="daycare.html" onclick="closeMobile()">🧸 Daycare</a>
       <a href="#courses" onclick="closeMobile()">📚 Courses</a>
       <a href="#why-us" onclick="closeMobile()">⭐ Why Us</a>
       <a href="#about" onclick="closeMobile()">🏫 About</a>
       <a href="#testimonials" onclick="closeMobile()">💬 Reviews</a>
       <a href="#contact" onclick="closeMobile()">📞 Contact</a>
-      <a href="#enroll" onclick="closeMobile()" style="color: var(--accent-amber);">🚀 Register Now</a>
     </div>
   </header>
 
@@ -202,7 +202,7 @@
                 <circle cx="12" cy="12" r="10" />
                 <polygon points="10 8 16 12 10 16 10 8" />
               </svg>
-              Book a free demo class
+              Register Now
             </a>
           </div>
         </div>
@@ -694,78 +694,102 @@
     <section class="section" id="why-us">
       <div class="container">
         <div class="section__header reveal">
-          <h2 class="section__title">Built for Results Parents Trust,<br><span class="text-gradient">and Learning
-              Students Enjoy</span></h2>
-          <p class="section__subtitle">Every part of the Zeta experience is designed to keep students confident and
-            parents informed — every step of the way.
-          </p>
+          <h2 class="section__title">Results Parents Trust.<br><span class="text-gradient">Learning Kids Love.</span></h2>
+          <p class="section__subtitle">Every child confident. Every parent at ease.</p>
         </div>
 
         <div class="row g-4">
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-expert">
               <div class="feature-card__icon tilt-card__icon-depth">🎓</div>
-              <h3 class="feature-card__title tilt-card__depth">Handpicked Expert Faculty</h3>
-              <p class="feature-card__desc tilt-card__depth">Every teacher at Zeta is carefully selected for subject
-                mastery and teaching experience across CBSE, Kerala Board & IGCSE. Parents can trust real qualified
-                mentors — not just tutors — guiding their child.</p>
+              <h3 class="feature-card__title tilt-card__depth">Expert Faculty</h3>
+              <p class="feature-card__desc tilt-card__depth">Subject-mastery teachers who actually connect with kids. Handpicked, not hired in bulk.</p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-personalized">
               <div class="feature-card__icon tilt-card__icon-depth">🎯</div>
-              <h3 class="feature-card__title tilt-card__depth">Personalised Learning Path</h3>
-              <p class="feature-card__desc tilt-card__depth">No two students learn the same way. We build a custom study
-                plan around your child's pace, strengths, and weak areas — so effort turns into real results, not
-                guesswork.</p>
+              <h3 class="feature-card__title tilt-card__depth">Personalised Path</h3>
+              <p class="feature-card__desc tilt-card__depth">A study plan built around your child — their pace, their gaps. No guesswork.</p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-interactive">
               <div class="feature-card__icon tilt-card__icon-depth">💬</div>
-              <h3 class="feature-card__title tilt-card__depth">Live Doubt-Clearing, Anytime</h3>
-              <p class="feature-card__desc tilt-card__depth">Students never get stuck. Every class comes with real-time
-                doubt solving, so confusion gets cleared in the moment — not days later. Confidence builds session by
-                session.</p>
+              <h3 class="feature-card__title tilt-card__depth">Instant Doubt Support</h3>
+              <p class="feature-card__desc tilt-card__depth">Stuck for a minute, not a day. Live help the moment confusion shows up.</p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-materials">
               <div class="feature-card__icon tilt-card__icon-depth">📚</div>
-              <h3 class="feature-card__title tilt-card__depth">Complete Study Toolkit</h3>
-              <p class="feature-card__desc tilt-card__depth">Chapter-wise notes, practice worksheets, and previous year
-                papers — all curated by our faculty. Students walk into every exam fully prepared, not scrambling last
-                minute.</p>
+              <h3 class="feature-card__title tilt-card__depth">Complete Study Kit</h3>
+              <p class="feature-card__desc tilt-card__depth">Notes, worksheets, past papers — curated. Walk into every exam ready.</p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-tracking">
               <div class="feature-card__icon tilt-card__icon-depth">📈</div>
-              <h3 class="feature-card__title tilt-card__depth">Transparent Progress Reports</h3>
-              <p class="feature-card__desc tilt-card__depth">Regular tests, performance reports, and parent-teacher
-                updates keep families in the loop. Parents always know exactly how their child is progressing — no
-                surprises at report card time.</p>
+              <h3 class="feature-card__title tilt-card__depth">Real-Time Progress</h3>
+              <p class="feature-card__desc tilt-card__depth">Tests, reports, updates. You always know where your child stands.</p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="feature-card tilt-card spotlight-card reveal-3d w-100" id="feature-flexible">
               <div class="feature-card__icon tilt-card__icon-depth">🕒</div>
-              <h3 class="feature-card__title tilt-card__depth">Learn Your Way — Online or Offline</h3>
-              <p class="feature-card__desc tilt-card__depth">Flexible batch timings and both online & offline options
-                mean learning fits into your family's schedule, not the other way around.
-                <!-- ═══ ABOUT / SPLIT ═══ -->
-              </p>
-
+              <h3 class="feature-card__title tilt-card__depth">Online or Offline</h3>
+              <p class="feature-card__desc tilt-card__depth">Flexible batches that fit your family — not the other way around.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ═══ STATS BANNER ═══ -->
+    <section class="section stats-banner" style="border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; background: var(--bg-secondary); padding: 30px 0; margin: -60px auto 40px; max-width: 1050px; position: relative; z-index: 10;">
+      <div class="container">
+        <div class="row text-center g-4 reveal-up">
+          <div class="col-6 col-md-3">
+            <div class="stat-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <div class="stat-number-wrapper" style="font-family: serif; font-size: 2.2rem; font-weight: 700; color: #f59e0b; margin-bottom: 8px; line-height: 1;">
+                <span class="stat__number" data-target="500">0</span>+
+              </div>
+              <div class="stat-label" style="font-size: 13px; color: #cbd5e1; font-weight: 500;">Students Trained</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <div class="stat-number-wrapper" style="font-family: serif; font-size: 2.2rem; font-weight: 700; color: #f59e0b; margin-bottom: 8px; line-height: 1;">
+                <span class="stat__number" data-target="95">0</span>%
+              </div>
+              <div class="stat-label" style="font-size: 13px; color: #cbd5e1; font-weight: 500;">Pass Rate</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <div class="stat-number-wrapper" style="font-family: serif; font-size: 2.2rem; font-weight: 700; color: #f59e0b; margin-bottom: 8px; line-height: 1;">
+                <span class="stat__number" data-target="10">0</span>+
+              </div>
+              <div class="stat-label" style="font-size: 13px; color: #cbd5e1; font-weight: 500;">Years Experience</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <div class="stat-number-wrapper" style="font-family: serif; font-size: 2.2rem; font-weight: 700; color: #f59e0b; margin-bottom: 8px; line-height: 1; display: flex; align-items: center; gap: 4px;">
+                <span>4.9</span><span style="font-size: 1.8rem; margin-top: -4px;">★</span>
+              </div>
+              <div class="stat-label" style="font-size: 13px; color: #cbd5e1; font-weight: 500;">Parent Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section py-2" id="about">
       <div class="container">
         <!-- Centered Header Row -->
@@ -880,7 +904,7 @@
       <div class="container">
         <div class="section__header reveal">
           <div class="section__tag">Student Voices</div>
-          <h2 class="section__title">What Our Students Say</h2>
+          <h2 class="section__title">What Our <span class="text-gradient">Students Say</span></h2>
           <p class="section__subtitle">Hear from students and parents who have experienced the ZETA difference.</p>
         </div>
 
@@ -970,7 +994,7 @@
       <div class="container">
         <div class="section__header reveal">
           <div class="section__tag">Get in Touch</div>
-          <h2 class="section__title">Contact Us</h2>
+          <h2 class="section__title">Contact <span class="text-gradient">Us</span></h2>
           <p class="section__subtitle">Have questions? Reach out to us and our expert academic advisors will assist you
             within 24 hours.
           </p>
@@ -1543,20 +1567,21 @@
               // Use easeOut effect for counting
               const easeProgress = 1 - Math.pow(1 - progress, 3);
               const currentValue = Math.floor(easeProgress * endValue);
+              const suffix = target.getAttribute('data-suffix') || '';
 
               if (endValue >= 1000) {
-                target.textContent = currentValue.toLocaleString() + '+';
+                target.textContent = currentValue.toLocaleString() + suffix;
               } else {
-                target.textContent = currentValue + '+';
+                target.textContent = currentValue + suffix;
               }
 
               if (progress < 1) {
                 requestAnimationFrame(animateCount);
               } else {
                 if (endValue >= 1000) {
-                  target.textContent = endValue.toLocaleString() + '+';
+                  target.textContent = endValue.toLocaleString() + suffix;
                 } else {
-                  target.textContent = endValue + '+';
+                  target.textContent = endValue + suffix;
                 }
               }
             }
